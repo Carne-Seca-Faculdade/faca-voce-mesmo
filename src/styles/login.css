@@ -1,12 +1,5 @@
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: Helvetica;
-}
-
 body {
-	background-image: url(../img/loginbanner.png);
+	background-image: url("/src/assets/images/loginBanner.png");
 	background-size: cover;
 }
 

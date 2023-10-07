@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
 h1,
 h2,
 h3 {
@@ -65,7 +67,7 @@ nav {
 }
 
 .main-banner {
-	background-image: url("/src/assets/images/aaa.png");
+	background-image: url("/src/assets/images/heroBanner.png");
 	background-size: cover;
 	background-position: center;
 	display: flex;
