@@ -1,168 +1,66 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FVM Tools</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Poppins"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/styles.css" />
-  </head>
-  <body>
-    <div class="container">
-      <div class="navbar-container">
-        <nav>
-          <a href="#">
-            <img src="img/fVMlogo.png" alt="FVM logo" class="logo" />
-          </a>
-          <ul class="navbar-items">
-            <li>
-              <a href="login.html" class="default-btn">Entrar</a>
-            </li>
-          </ul>
-          <div class="search-box">
-            <input
-              type="text"
-              class="search-txt"
-              placeholder="Buscar ferramentas"
-            />
-            <a href="#" class="search-btn">
-              <img src="img/lupa.png" alt="Lupa" height="20" width="20" />
-            </a>
-          </div>
-        </nav>
-      </div>
-      <main>
-        <div class="main-banner">
-          <div class="card">
-            <input id="more" type="checkbox" />
+<html lang="en">
 
-            <h1>FVM tools</h1>
-            <p>Do it yourself without leaving home...</p>
-            <div class="content-more">
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Doloremque eius, cumque provident voluptatum accusamus deserunt
-                accusantium beatae voluptatem culpa magnam nostrum dolores porro
-                consectetur?
-              </p>
-              <label for="more">Mostrar menos</label>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de produtos</title>
+    <link rel="stylesheet" href="import.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="root.css">
+    <link rel="stylesheet" href="reset.css">
+</head>
+
+<body>
+    <nav class="navbar"> <!-- "CABEÇALHO" -->
+        <div class="conteudo">
+            <img src="Imagens/logo.jpg" alt="Logo" class="logo">
+            <div class="navbarInput">
+                <input type="text" value="Buscar ferramentas"><img src="Imagens/lupa.png" alt="Lupa" class="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
             </div>
-            <label for="more">Saber mais</label>
-          </div>
         </div>
-        <section class="about-container">
-          <h2>Sobre Nós</h2>
-          <ul>
-            <li>
-              <h3>Lorem</h3>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum
-              iste, natus quae temporibus architecto necessitatibus deleniti
-              eius voluptatem error dolore ea id repellat blanditiis aliquam
-              doloremque ipsam explicabo impedit voluptatum!
-            </li>
-            <li>
-              <h3>Lorem</h3>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum
-              iste, natus quae temporibus architecto necessitatibus deleniti
-              eius voluptatem error dolore ea id repellat blanditiis aliquam
-              doloremque ipsam explicabo impedit voluptatum!
-            </li>
-            <li>
-              <h3>Lorem</h3>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum
-              iste, natus quae temporibus architecto necessitatibus deleniti
-              eius voluptatem error dolore ea id repellat blanditiis aliquam
-              doloremque ipsam explicabo impedit voluptatum!
-            </li>
-          </ul>
-        </section>
-        <div class="content-ctt">
-          <div id="ctt-container">
-            <a href="#">
-              <div class="ctt-button">Entrar em contato</div>
-            </a>
-          </div>
+        <button class="navbarBotao">Entrar</button>
+    </nav>
+
+    <header> <!-- Informação dos produtos -->
+
+        <div class="produtosContainer">
+            <div class="image">
+                <img src="Imagens/martelo.jpg" alt="martelo">
+            </div>
+            <div class="texto">
+
+                <h3 class="nome">Martelo ferradura Cabo Madeira Stanley 200g 25mm.</h3>
+                <p class="descricao">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias eaque
+                    dignissimos<br>
+                    veniam suscipit hic iure sint, eius necessitatibus unde harum ab dicta delectus dolores vero<br>
+                    modi quam molestiae ipsam vitae?</p>
+                <p class="preco"><strong>R$ 70,00</strong>/Diária</p>
+                <p class="distancia">À <strong>5km</strong> de distância</p>
+                <div class="localizacao">
+                    <img src="Imagens/local.png" alt="Ponto de local" class="local">
+                    <p class="localData"> Maringá, Zona 07 | 14 de Set, 12:02</p>
+                </div>
+
+
+                <div class="botoes">
+                    <button class="botaoFav"><img src="Imagens/favoritar.png" alt="Favoritar" class="coracao">
+                        <p class="favTexto">Favoritar</p>
+                    </button>
+                    <button class="botaoComp"><img src="Imagens/compartilhar.png" alt="Compartilhar" class="share">
+                        <p class="compTexto">Compartilhar</p>
+                    </button>
+                    <button class="botaoDenum"><img src="Imagens/bandeira.png" alt="Bandeira" class="flag">
+                        <p class="denumTexto">Denunciar</p>
+                    </button>
+                    <button class="botaoContato">
+                        <p class="contato">Contato</p>
+                    </button>
+                </div>
+            </div>
         </div>
-        <section class="categorias-container">
-          <h2>Categorias</h2>
-          <div class="tools-container">
-            <div class="tools-single">
-              <div class="bgtools">
-                <img
-                  class="imgfront"
-                  src="img/catJardinagem.avif"
-                  alt="Categoria de Jardinagem"
-                />
-                <div class="named-tools">
-                  <h3>Jardinagem</h3>
-                </div>
-              </div>
-              <div class="bgtools">
-                <img
-                  class="imgfront"
-                  src="img/catConstrução.jpg"
-                  alt="Categoria de Construção"
-                />
-                <div class="named-tools">
-                  <h3>Construção</h3>
-                </div>
-              </div>
-              <div class="bgtools">
-                <img
-                  class="imgfront"
-                  src="img/CatLimpeza.jpg"
-                  alt="Categoria de limpeza"
-                />
-                <div class="named-tools">
-                  <h3>Limpeza</h3>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
-      <div class="footer-space">
-        <hr size="1" width="100%">
-      </div>
-      <footer>
-        <div class="footer-container">
-          <div class="contacts">
-          <div id="links">Links</div>
-            <div>
-              <div class="Home">Home</div>
-              <div class="Login">Login</div>
-              <div class="Produtos">Produtos</div>
-            </div>
-          </div>
-          <div class="contacts-meio">
-            <div>
-              <span>Todos os direitos reservados à </span><span><strong>FVM</strong></span>
-            </div>
-            <div>
-              FVM locação de ferramenta e equipamentos
-            </div>
-            <div>CNPJ: 00.000.000/0000-00</div>
-          </div>
-          <div class="contacts">
-            <div id="faleConosco">Fale conosco</div>
-            <div>
-              <div class="Whatsapp">Whatsapp</div>
-              <div class="Instagram">Instagram</div>
-              <div class="Email">Email</div>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </div>
-  </body>
+    </header>
+</body>
+
 </html>
