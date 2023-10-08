@@ -28,161 +28,151 @@
 
 		<link rel="stylesheet" href="/src/styles/reset.css" />
 		<link rel="stylesheet" href="/src/styles/variables.css" />
-		<link rel="stylesheet" href="/src/styles/styles.css" />
+		<link rel="stylesheet" href="/src/styles/home.css" />
 	</head>
 	<body>
-		<div class="container">
-			<div class="navbar-container">
-				<nav>
-					<a href="#">
-						<img
-							src="/src/assets/images/FVMLogoWithoutText.png"
-							alt="FVM logo"
-							class="logo"
-						/>
-					</a>
-					<ul class="navbar-items">
-						<li>
-							<a href="/src/views/login.html" class="default-btn"
-								>Entrar</a
-							>
-						</li>
-					</ul>
-					<div class="search-box">
-						<input
-							type="text"
-							class="search-txt"
-							placeholder="Buscar ferramentas"
-						/>
+		<nav class="navbar">
+			<div class="navbar__content">
+				<a href="/src/index.html">
+					<img
+						src="/src/assets/images/FVMLogoWithoutText.png"
+						alt="Logo da FVM"
+						class="navbar__logo"
+					/>
+				</a>
+				<form class="navbar__search-form">
+					<input type="text" placeholder="Buscar ferramentas" />
+					<button type="submit">
 						<i class="fa-solid fa-magnifying-glass"></i>
-					</div>
-				</nav>
+					</button>
+				</form>
 			</div>
-			<main>
-				<div class="main-banner">
-					<div class="card">
-						<input id="more" type="checkbox" />
+			<button class="navbar__login-button">Entrar</button>
+		</nav>
 
-						<h1>FVM tools</h1>
-						<p>Do it yourself without leaving home...</p>
-						<div class="content-more">
-							<p>
-								Lorem ipsum dolor sit amet consectetur,
-								adipisicing elit. Doloremque eius, cumque
-								provident voluptatum accusamus deserunt
-								accusantium beatae voluptatem culpa magnam
-								nostrum dolores porro consectetur?
-							</p>
-							<label for="more">Mostrar menos</label>
-						</div>
-						<label for="more">Saber mais</label>
+		<main>
+			<div class="main-banner">
+				<div class="card">
+					<input id="more" type="checkbox" />
+
+					<h1>FVM tools</h1>
+					<p>Do it yourself without leaving home...</p>
+					<div class="content-more">
+						<p>
+							Lorem ipsum dolor sit amet consectetur, adipisicing
+							elit. Doloremque eius, cumque provident voluptatum
+							accusamus deserunt accusantium beatae voluptatem
+							culpa magnam nostrum dolores porro consectetur?
+						</p>
+						<label for="more">Mostrar menos</label>
 					</div>
+					<label for="more">Saber mais</label>
 				</div>
-				<section class="about-container">
-					<h2>Sobre Nós</h2>
-					<ul>
-						<li>
-							<h3>Lorem</h3>
-							Lorem ipsum dolor, sit amet consectetur adipisicing
-							elit. Eum iste, natus quae temporibus architecto
-							necessitatibus deleniti eius voluptatem error dolore
-							ea id repellat blanditiis aliquam doloremque ipsam
-							explicabo impedit voluptatum!
-						</li>
-						<li>
-							<h3>Lorem</h3>
-							Lorem ipsum dolor, sit amet consectetur adipisicing
-							elit. Eum iste, natus quae temporibus architecto
-							necessitatibus deleniti eius voluptatem error dolore
-							ea id repellat blanditiis aliquam doloremque ipsam
-							explicabo impedit voluptatum!
-						</li>
-						<li>
-							<h3>Lorem</h3>
-							Lorem ipsum dolor, sit amet consectetur adipisicing
-							elit. Eum iste, natus quae temporibus architecto
-							necessitatibus deleniti eius voluptatem error dolore
-							ea id repellat blanditiis aliquam doloremque ipsam
-							explicabo impedit voluptatum!
-						</li>
-					</ul>
-				</section>
-				<div class="content-ctt">
-					<div id="ctt-container">
-						<a href="#">
-							<div class="ctt-button">Entrar em contato</div>
-						</a>
-					</div>
-				</div>
-				<section class="categorias-container">
-					<h2>Categorias</h2>
-					<div class="tools-container">
-						<div class="tools-single">
-							<div class="bgtools">
-								<img
-									class="imgfront"
-									src="/src/assets/images/categoriaJardinagemImage.jpg"
-									alt="Categoria de Jardinagem"
-								/>
-								<div class="named-tools">
-									<h3>Jardinagem</h3>
-								</div>
-							</div>
-							<div class="bgtools">
-								<img
-									class="imgfront"
-									src="/src/assets/images/categoriaConstrucaoImage.jpg"
-									alt="Categoria de Construção"
-								/>
-								<div class="named-tools">
-									<h3>Construção</h3>
-								</div>
-							</div>
-							<div class="bgtools">
-								<img
-									class="imgfront"
-									src="/src/assets/images/categoriaLimpezaImage.jpg"
-									alt="Categoria de limpeza"
-								/>
-								<div class="named-tools">
-									<h3>Limpeza</h3>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-			</main>
-			<div class="footer-space">
-				<hr size="1" width="100%" />
 			</div>
-			<footer>
-				<div class="footer-container">
-					<div class="contacts">
-						<div id="links">Links</div>
-						<div>
-							<div class="Home">Home</div>
-							<div class="Login">Login</div>
-							<div class="Produtos">Produtos</div>
+			<section class="about-container">
+				<h2>Sobre Nós</h2>
+				<ul>
+					<li>
+						<h3>Lorem</h3>
+						Lorem ipsum dolor, sit amet consectetur adipisicing
+						elit. Eum iste, natus quae temporibus architecto
+						necessitatibus deleniti eius voluptatem error dolore ea
+						id repellat blanditiis aliquam doloremque ipsam
+						explicabo impedit voluptatum!
+					</li>
+					<li>
+						<h3>Lorem</h3>
+						Lorem ipsum dolor, sit amet consectetur adipisicing
+						elit. Eum iste, natus quae temporibus architecto
+						necessitatibus deleniti eius voluptatem error dolore ea
+						id repellat blanditiis aliquam doloremque ipsam
+						explicabo impedit voluptatum!
+					</li>
+					<li>
+						<h3>Lorem</h3>
+						Lorem ipsum dolor, sit amet consectetur adipisicing
+						elit. Eum iste, natus quae temporibus architecto
+						necessitatibus deleniti eius voluptatem error dolore ea
+						id repellat blanditiis aliquam doloremque ipsam
+						explicabo impedit voluptatum!
+					</li>
+				</ul>
+			</section>
+			<div class="content-ctt">
+				<div id="ctt-container">
+					<a href="#">
+						<div class="ctt-button">Entrar em contato</div>
+					</a>
+				</div>
+			</div>
+			<section class="categorias-container">
+				<h2>Categorias</h2>
+				<div class="tools-container">
+					<div class="tools-single">
+						<div class="bgtools">
+							<img
+								class="imgfront"
+								src="/src/assets/images/categoriaJardinagemImage.jpg"
+								alt="Categoria de Jardinagem"
+							/>
+							<div class="named-tools">
+								<h3>Jardinagem</h3>
+							</div>
 						</div>
-					</div>
-					<div class="contacts-meio">
-						<div>
-							<span>Todos os direitos reservados à </span
-							><span><strong>FVM</strong></span>
+						<div class="bgtools">
+							<img
+								class="imgfront"
+								src="/src/assets/images/categoriaConstrucaoImage.jpg"
+								alt="Categoria de Construção"
+							/>
+							<div class="named-tools">
+								<h3>Construção</h3>
+							</div>
 						</div>
-						<div>FVM locação de ferramenta e equipamentos</div>
-						<div>CNPJ: 00.000.000/0000-00</div>
-					</div>
-					<div class="contacts">
-						<div id="faleConosco">Fale conosco</div>
-						<div>
-							<div class="Whatsapp">Whatsapp</div>
-							<div class="Instagram">Instagram</div>
-							<div class="Email">Email</div>
+						<div class="bgtools">
+							<img
+								class="imgfront"
+								src="/src/assets/images/categoriaLimpezaImage.jpg"
+								alt="Categoria de limpeza"
+							/>
+							<div class="named-tools">
+								<h3>Limpeza</h3>
+							</div>
 						</div>
 					</div>
 				</div>
-			</footer>
+			</section>
+		</main>
+		<div class="footer-space">
+			<hr size="1" width="100%" />
 		</div>
+		<footer>
+			<div class="footer-container">
+				<div class="contacts">
+					<div id="links">Links</div>
+					<div>
+						<div class="Home">Home</div>
+						<div class="Login">Login</div>
+						<div class="Produtos">Produtos</div>
+					</div>
+				</div>
+				<div class="contacts-meio">
+					<div>
+						<span>Todos os direitos reservados à </span
+						><span><strong>FVM</strong></span>
+					</div>
+					<div>FVM locação de ferramenta e equipamentos</div>
+					<div>CNPJ: 00.000.000/0000-00</div>
+				</div>
+				<div class="contacts">
+					<div id="faleConosco">Fale conosco</div>
+					<div>
+						<div class="Whatsapp">Whatsapp</div>
+						<div class="Instagram">Instagram</div>
+						<div class="Email">Email</div>
+					</div>
+				</div>
+			</div>
+		</footer>
 	</body>
 </html>

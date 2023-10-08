@@ -10,60 +10,26 @@ p {
 	color: #70747a;
 }
 
-.navbar-container {
-	width: 100%;
-	height: 80px;
-	background-color: #fff;
-	padding: 0 2rem;
+.navbar {
+	background-color: red;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	overflow: hidden;
+	padding: 0.75rem 1.25rem;
+	max-height: 80px;
 }
 
-nav {
-	position: relative;
+.navbar__content {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.75rem;
 }
 
-.logo {
-	width: 85px;
-	margin-left: 0;
-}
-
-.navbar-items {
-	position: absolute;
-	right: 0px;
-	height: 80px;
-	line-height: 80px;
-	margin: 0;
-	display: inline-block;
-}
-
-.navbar-items li {
-	display: inline-block;
-	margin-left: 25px;
-}
-
-.navbar-items li:nth-child(5) a {
-	text-transform: none;
-}
-
-.navbar-items a {
-	color: #2552a7;
-	text-decoration: none;
-	transition: 0.5s;
-}
-
-.navbar-items a:hover {
-	color: black;
-}
-
-.default-btn {
-	padding: 8px 15px;
-	background-color: transparent;
-	border: 1px #2552a7 solid;
-	border-radius: 20px;
-}
-
-.navbar-items .default-btn:hover {
-	background-color: #7697d3;
-	color: white;
+.navbar__logo {
+	width: 80px;
+	height: auto;
 }
 
 .main-banner {

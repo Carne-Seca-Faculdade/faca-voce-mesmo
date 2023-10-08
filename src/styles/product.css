@@ -1,0 +1,220 @@
+/* INÍCIO DO "CABEÇALHO" */
+
+.navbar-container {
+	width: 100%;
+	height: 80px;
+	background-color: #fff;
+	padding: 0 2rem;
+}
+
+nav {
+	position: relative;
+}
+
+.logo {
+	width: 85px;
+	margin-left: 0;
+}
+
+.navbar-items {
+	position: absolute;
+	right: 0px;
+	height: 80px;
+	line-height: 80px;
+	margin: 0;
+	display: inline-block;
+}
+
+.navbar-items li {
+	display: inline-block;
+	margin-left: 25px;
+}
+
+.navbar-items li:nth-child(5) a {
+	text-transform: none;
+}
+
+.navbar-items a {
+	color: #2552a7;
+	text-decoration: none;
+	transition: 0.5s;
+}
+
+.navbar-items a:hover {
+	color: black;
+}
+
+.default-btn {
+	padding: 8px 15px;
+	background-color: transparent;
+	border: 1px #2552a7 solid;
+	border-radius: 20px;
+}
+
+.navbar-items .default-btn:hover {
+	background-color: #7697d3;
+	color: white;
+}
+
+/* FIM DO "CABEÇALHO" */
+
+/* INÍCIO DOS PRODUTOS */
+
+.produtosContainer {
+	display: flex;
+	align-items: flex-start;
+	padding: 20px;
+	width: 100%;
+}
+
+.image img {
+	padding: 20px;
+	width: 100%;
+	width: 400px;
+	height: auto;
+}
+
+.texto {
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+	padding: 20px;
+	width: 100%;
+}
+
+.nome {
+	font-size: 25px;
+}
+
+.descricao {
+	font-size: 15px;
+	margin-top: 15px;
+}
+
+.preco {
+	font-size: 25px;
+	margin-top: 25px;
+}
+
+.distancia {
+	font-size: 25px;
+}
+
+.localizacao {
+	display: flex;
+	flex-direction: row;
+	margin-top: 25px;
+}
+
+.local {
+	width: 30px;
+	height: 30px;
+}
+
+.localData {
+	font-size: 15px;
+}
+
+.botoes {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-top: 15px;
+	width: 100%;
+}
+
+.botaoFav {
+	display: flex;
+	flex-direction: row;
+	cursor: pointer;
+	border: 0.5px solid var(--colorNeutral2);
+	border-color: rgb(27, 46, 191);
+	color: rgb(27, 46, 191);
+	border-radius: 10px;
+	padding: 5px;
+}
+
+.coracao {
+	width: 25px;
+	height: 25px;
+	margin-right: 20px;
+	margin-left: 5px;
+	margin-top: 5px;
+	margin-bottom: 2px;
+}
+
+.favTexto {
+	display: flex;
+	align-self: center;
+}
+
+.botaoComp {
+	display: flex;
+	flex-direction: row;
+	cursor: pointer;
+	border: 0.5px solid var(--colorNeutral2);
+	border-color: rgb(27, 46, 191);
+	color: rgb(27, 46, 191);
+	border-radius: 10px;
+}
+
+.share {
+	width: 25px;
+	height: 25px;
+	margin-left: 5px;
+	margin-right: 20px;
+	margin-top: 5px;
+	margin-bottom: 4px;
+}
+
+.compTexto {
+	display: flex;
+	align-self: center;
+	margin-right: 5px;
+}
+
+.botaoDenum {
+	display: flex;
+	flex-direction: row;
+	cursor: pointer;
+	border: 0.5px solid var(--colorNeutral2);
+	border-color: rgb(27, 46, 191);
+	color: rgb(27, 46, 191);
+	border-radius: 10px;
+	padding: 5px;
+}
+
+.flag {
+	width: 25px;
+	height: 25px;
+	margin-left: 5px;
+	margin-right: 20px;
+	margin-top: 5px;
+	margin-bottom: 2px;
+}
+
+.denumTexto {
+	display: flex;
+	align-self: center;
+	margin-right: 5px;
+}
+
+.botaoContato {
+	display: flex;
+	flex-direction: row;
+	cursor: pointer;
+	border: 0.5px solid var(--colorNeutral2);
+	border-color: rgb(27, 46, 191);
+	background-color: rgb(27, 46, 191);
+	border-radius: 10px;
+	padding: 5px;
+}
+
+.contato {
+	display: flex;
+	align-self: center;
+	margin-right: 10px;
+	margin-left: 10px;
+	color: white;
+}
