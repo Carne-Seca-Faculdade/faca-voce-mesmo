@@ -91,7 +91,7 @@
 	margin-bottom: 1.25rem;
 }
 
-.CTA-button {
+.primary-button {
 	display: block;
 	text-align: center;
 	width: fit-content;
@@ -104,7 +104,7 @@
 	transition: all 0.3s ease-in-out;
 }
 
-.CTA-button:hover {
+.primary-button:hover {
 	opacity: 0.8;
 }
 
