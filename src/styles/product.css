@@ -1,64 +1,71 @@
-/* INÍCIO DO "CABEÇALHO" */
-
-.navbar-container {
-	width: 100%;
-	height: 80px;
-	background-color: #fff;
-	padding: 0 2rem;
+.navbar {
+	background-color: var(--colorWhite);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	overflow: hidden;
+	padding: 0.75rem 1.25rem;
+	max-height: 80px;
 }
 
-nav {
-	position: relative;
+.navbar__content {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.75rem;
 }
 
-.logo {
-	width: 85px;
-	margin-left: 0;
+.navbar__search-form {
+	background-color: var(--colorNeutral-200);
+	padding: 0.5rem;
+	border-radius: 8px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+	min-width: 300px;
 }
 
-.navbar-items {
-	position: absolute;
-	right: 0px;
-	height: 80px;
-	line-height: 80px;
-	margin: 0;
-	display: inline-block;
+.navbar__search-form input {
+	flex: 1 1 0%;
+	color: var(--textBlack);
+	font-size: 0.875rem;
 }
 
-.navbar-items li {
-	display: inline-block;
-	margin-left: 25px;
+.navbar__search-form input::placeholder {
+	color: var(--textGray);
 }
 
-.navbar-items li:nth-child(5) a {
-	text-transform: none;
+.navbar__logo {
+	width: 80px;
+	height: auto;
 }
 
-.navbar-items a {
-	color: #2552a7;
+.navbar__login-button {
+	display: block;
+	text-align: center;
 	text-decoration: none;
-	transition: 0.5s;
+	border: 0.5px solid var(--colorNeutral-300);
+	border-radius: 50px;
+	padding: 0.75rem 1rem;
+	min-width: 120px;
+	color: var(--colorNeutral-300);
+	font-size: 0.875rem;
+	transition: all 0.2s ease-in-out;
 }
 
-.navbar-items a:hover {
-	color: black;
+.navbar__login-button:hover {
+	background-color: var(--colorSecondary);
+	color: var(--textWhite);
+	border-color: transparent;
 }
 
-.default-btn {
-	padding: 8px 15px;
-	background-color: transparent;
-	border: 1px #2552a7 solid;
-	border-radius: 20px;
+/* TODO MOVE THIS MEDIA QUERY TO THE END OF THE PAGE */
+@media (max-width: 768px) {
+	.navbar__search-form {
+		display: none;
+	}
 }
-
-.navbar-items .default-btn:hover {
-	background-color: #7697d3;
-	color: white;
-}
-
-/* FIM DO "CABEÇALHO" */
-
-/* INÍCIO DOS PRODUTOS */
 
 .produtosContainer {
 	display: flex;
