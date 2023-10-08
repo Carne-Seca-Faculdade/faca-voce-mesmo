@@ -32,7 +32,6 @@ s,
 samp,
 small,
 strike,
-strong,
 sub,
 sup,
 tt,
@@ -149,6 +148,12 @@ button {
 	background-color: transparent;
 	border: none;
 	outline: transparent;
+}
+
+body {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
 }
 
 body::-webkit-scrollbar {

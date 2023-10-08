@@ -28,7 +28,7 @@
 
 		<link rel="stylesheet" href="/src/styles/reset.css" />
 		<link rel="stylesheet" href="/src/styles/variables.css" />
-		<link rel="stylesheet" href="/src/styles/home.css" />
+		<link rel="stylesheet" href="/src/styles/products.css" />
 	</head>
 	<body>
 		<nav class="navbar">
@@ -47,9 +47,112 @@
 					</button>
 				</form>
 			</div>
-			<a href="/src/views/login.html" class="navbar__login-button">
+			<a
+				href="/src/views/login.html"
+				title="Clique para entrar"
+				class="navbar__login-button"
+			>
 				Entrar
 			</a>
 		</nav>
+
+		<main class="main">
+			<div class="products__filters">
+				<h2>Produtos disponíveis</h2>
+				<div>
+					<button class="filters__show-as-button">
+						<i class="fa-solid fa-table-cells-large"></i>
+					</button>
+					<button class="filters__order-by-button">
+						Ordenar por <i class="fa-solid fa-angle-down"></i>
+					</button>
+				</div>
+			</div>
+			<section class="products">
+				<article class="grid-product">
+					<button class="grid-product__like-button">
+						<i class="fa-regular fa-heart"></i>
+					</button>
+					<img
+						class="grid-product__image"
+						src="/src/assets//images/betorneira.png"
+					/>
+					<div class="grid-product__info">
+						<h3>Betorneira usada 2019</h3>
+						<div>
+							<span><strong>R$ 70,00</strong>/Diária</span>
+							<strong>5km</strong>
+						</div>
+					</div>
+				</article>
+				<article class="grid-product">
+					<button class="grid-product__like-button">
+						<i class="fa-regular fa-heart"></i>
+					</button>
+					<img
+						class="grid-product__image"
+						src="/src/assets//images/betorneira.png"
+					/>
+					<div class="grid-product__info">
+						<h3>Betorneira usada 2019</h3>
+						<div>
+							<span><strong>R$ 70,00</strong>/Diária</span>
+							<strong>5km</strong>
+						</div>
+					</div>
+				</article>
+				<article class="grid-product">
+					<button class="grid-product__like-button">
+						<i class="fa-regular fa-heart"></i>
+					</button>
+					<img
+						class="grid-product__image"
+						src="/src/assets//images/betorneira.png"
+					/>
+					<div class="grid-product__info">
+						<h3>Betorneira usada 2019</h3>
+						<div>
+							<span><strong>R$ 70,00</strong>/Diária</span>
+							<strong>5km</strong>
+						</div>
+					</div>
+				</article>
+				<article class="grid-product">
+					<button class="grid-product__like-button">
+						<i class="fa-regular fa-heart"></i>
+					</button>
+					<img
+						class="grid-product__image"
+						src="/src/assets//images/betorneira.png"
+					/>
+					<div class="grid-product__info">
+						<h3>Betorneira usada 2019</h3>
+						<div>
+							<span><strong>R$ 70,00</strong>/Diária</span>
+							<strong>5km</strong>
+						</div>
+					</div>
+				</article>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div>
+				<h3>Links</h3>
+				<ul>
+					<li><a href="/src/index.html">Home</a></li>
+					<li><a href="/src/views/login.html">Login</a></li>
+					<li><a href="/src/views/products.html">Produtos</a></li>
+				</ul>
+			</div>
+			<div>
+				<h3>Fale conosco</h3>
+				<ul>
+					<li><a href="#">Whatsapp</a></li>
+					<li><a href="#">Instagram</a></li>
+					<li><a href="#">Email</a></li>
+				</ul>
+			</div>
+		</footer>
 	</body>
 </html>
