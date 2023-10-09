@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica, sans-serif;
+  color: #323232;
+  border: none;
+}
+
+input,
+label {
+  display: block;
+  outline: none;
+  width: 100%;
+}
+
+a {
+  color: #2552a7;
+}
+
+body {
+  padding-top: 5vh;
+  background-image: url("../img/Imagem\ do\ WhatsApp\ de\ 2023-10-02\ à\(s\)\ 20.33.23_2a78e64d.jpg");
+  background-size: cover;
+  background-position-y: -150px;
+}
+
+#main-container {
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 25px;
+}
+
+#main-container h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 1.6rem;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.full-box {
+  flex: 1 1 100%;
+  position: relative;
+}
+
+.half-box {
+  flex: 1 1 45%;
+  position: relative;
+}
+
+.spacing {
+  margin-right: 2.5%;
+}
+
+label {
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+input {
+  border-bottom: 2px solid #323232;
+  padding: 10px;
+  font-size: 0.9rem;
+  margin-bottom: 40px;
+}
+
+input:focus {
+  border-color: #2552a7;
+}
+
+input[type="submit"] {
+  background-color: #2552a7;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  height: 40px;
+  cursor: pointer;
+}
+
+#agreement {
+  margin-right: 5px;
+}
+
+#agreement,
+#agreement-label {
+  display: inline-block;
+  width: auto;
+}
+
+.error-validation {
+  color: #ff1a1a;
+  position: absolute;
+  top: 57px;
+  font-size: 12px;
+}
+
+.template {
+  display: none;
+}
+
+.required-field {
+  color: red;
+}
+
+.modal {
+  visibility: hidden;
+  opacity: 0.1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #323232;
+  transition: all 0.4s;
+}
+
+.modal_conteudo {
+  border-radius: 4px;
+  position: relative;
+  width: 500px;
+  max-width: 90%;
+  background-color: #fff;
+  padding: 1em 2em;
+}
+
+.modal_conteudo p {
+  text-align: center;
+  margin-bottom: 25px;
+}
+.modal-fechar {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #2552a7;
+  text-decoration: none;
+}
+
+.modal:target {
+  visibility: visible;
+  opacity: 0.9;
+}
