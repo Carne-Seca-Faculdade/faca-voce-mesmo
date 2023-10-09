@@ -145,12 +145,12 @@
 	border: 0.5px solid var(--colorPrimary);
 	padding: 0.75rem 1.25rem;
 	border-radius: 8px;
-	transition: all 0.3s ease-in-out;
+	transition: all 0.2s ease-in-out;
 	width: 100%;
 }
 
 .outlined-button:hover {
-	background-color: var(--colorPrimary);
+	background-color: var(--colorSecondary);
 	color: var(--textWhite);
 	border-color: transparent;
 }
@@ -170,7 +170,7 @@
 }
 
 .primary-button:hover {
-	opacity: 0.8;
+	background-color: var(--colorSecondary);
 }
 
 .footer {
@@ -235,11 +235,19 @@
 		text-align: left;
 	}
 
+	.outlined-button span {
+		display: none;
+	}
+
 	.botoes {
-		flex-direction: row;
 		flex-wrap: wrap;
+		flex-direction: row;
 		justify-content: space-between;
 		align-items: center;
+	}
+
+	.botoes div {
+		min-width: 300px;
 	}
 
 	.botoes button {
