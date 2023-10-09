@@ -107,6 +107,12 @@
 	flex: 1 1 0%;
 }
 
+.profile-content h2 {
+	font-size: 1.25rem;
+	font-weight: 500;
+	color: var(--textBlack);
+}
+
 .products__filters {
 	display: flex;
 	align-items: center;
@@ -122,6 +128,10 @@
 	border: 0.5px solid var(--colorNeutral-300);
 	border-radius: 8px;
 	max-width: 400px;
+}
+
+.search-input input {
+	width: 100%;
 }
 
 .products__filters div {
@@ -185,6 +195,7 @@
 }
 
 .grid-product__like-button {
+	opacity: 0;
 	position: absolute;
 	top: 0.5rem;
 	right: 0.5rem;
@@ -193,6 +204,10 @@
 	font-size: 1.5rem;
 	color: var(--textWhite);
 	transition: all 0.3s ease-in-out;
+}
+
+.grid-product:hover .grid-product__like-button {
+	opacity: 1;
 }
 
 .grid-product__like-button:hover {

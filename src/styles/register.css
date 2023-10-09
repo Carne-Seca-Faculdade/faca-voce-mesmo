@@ -26,9 +26,8 @@ body {
 }
 
 #logo-GID {
-	width: 200px;
-	height: 200px;
-	margin: 25px auto 12px;
+	max-width: 200px;
+	height: auto;
 	border-radius: 10%;
 }
 
