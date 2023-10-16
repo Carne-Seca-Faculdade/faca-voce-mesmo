@@ -1,155 +1,145 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-		<title>FVM - Compra e Venda de Ferramentas</title>
+    <title>FVM - Compra e Venda de Ferramentas</title>
 
-		<link
-			rel="shortcut icon"
-			href="/src/assets/images/favicon.ico"
-			type="image/x-icon"
-		/>
+    <link
+      rel="shortcut icon"
+      href="/src/assets/images/favicon.ico"
+      type="image/x-icon"
+    />
 
-		<script
-			src="https://kit.fontawesome.com/e7fc9f162e.js"
-			crossorigin="anonymous"
-			defer
-		></script>
+    <script
+      src="https://kit.fontawesome.com/e7fc9f162e.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
 
-		<link
-			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
-			rel="stylesheet"
-		/>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-		<link rel="stylesheet" href="/src/styles/reset.css" />
-		<link rel="stylesheet" href="/src/styles/variables.css" />
-		<link rel="stylesheet" href="/src/styles/product.css" />
-	</head>
+    <script src="/src/js/product.js" defer></script>
+    <link rel="stylesheet" href="/src/styles/reset.css" />
+    <link rel="stylesheet" href="/src/styles/variables.css" />
+    <link rel="stylesheet" href="/src/styles/product.css" />
+  </head>
 
-	<body>
-		<!-- 		<div class="modal">
-			<div class="modal__card">
-				<button class="modal__close-button">
-					<i class="fa-solid fa-xmark"></i>
-				</button>
-				<div class="modal__content">
-					<h2>Contato</h2>
-				</div>
-			</div>
-		</div> -->
+  <body>
+    <div class="modal hidden" id="contactModal">
+      <div class="modal__card">
+        <button class="modal__close-button" id="closeContactModal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="modal__content">
+          <h2>Contato</h2>
+					<p>Gabriel da Silva</p>
+					<p>Telefone: (45) 9999-9999</p>
+        </div>
+      </div>
+    </div>
 
-		<nav class="navbar">
-			<div class="navbar__content">
-				<a href="/index.html">
-					<img
-						src="/src/assets/images/FVMLogoWithoutText.png"
-						alt="Logo da FVM"
-						class="navbar__logo"
-					/>
-				</a>
-				<form class="navbar__search-form">
-					<input type="text" placeholder="Buscar ferramentas" />
-					<button type="submit">
-						<i class="fa-solid fa-magnifying-glass"></i>
-					</button>
-				</form>
-			</div>
-			<a
-				href="/src/views/login.html"
-				title="Clique para entrar"
-				class="navbar__login-button"
-			>
-				Entrar
-			</a>
-		</nav>
+    <nav class="navbar">
+      <div class="navbar__content">
+        <a href="/index.html">
+          <img
+            src="/src/assets/images/FVMLogoWithoutText.png"
+            alt="Logo da FVM"
+            class="navbar__logo"
+          />
+        </a>
+        <form class="navbar__search-form">
+          <input type="text" placeholder="Buscar ferramentas" />
+          <button type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+      </div>
+      <a
+        href="/src/views/login.html"
+        title="Clique para entrar"
+        class="navbar__login-button"
+      >
+        Entrar
+      </a>
+    </nav>
 
-		<main class="main">
-			<div class="produtosContainer">
-				<img
-					class="image"
-					src="/src/assets/images/betorneira.png"
-					alt="Betorneira"
-				/>
-				<div class="texto">
-					<h3 class="nome">Betoneira 150 Litros 0,5CV Monofásica</h3>
-					<p class="descricao">
-						Betoneira CSM-CS150L com capacidade de mistura de 85
-						litros, ideal para construções de pequeno porte.
-						Equipada com motor de 0,5CV e rotação de 34RPM. Garantia
-						de 6 meses.
-					</p>
+    <main class="main">
+      <div class="produtosContainer">
+        <img
+          class="image"
+          src="/src/assets/images/betorneira.png"
+          alt="Betorneira"
+        />
+        <div class="texto">
+          <h3 class="nome">Betoneira 150 Litros 0,5CV Monofásica</h3>
+          <p class="descricao">
+            Betoneira CSM-CS150L com capacidade de mistura de 85 litros, ideal
+            para construções de pequeno porte. Equipada com motor de 0,5CV e
+            rotação de 34RPM. Garantia de 6 meses.
+          </p>
 
-					<div class="product__main-info">
-						<strong class="preco">R$ 2.400,00</strong>
-						<p class="distancia">
-							À <strong>5km</strong> de distância
-						</p>
-					</div>
+          <div class="product__main-info">
+            <strong class="preco">R$ 2.400,00</strong>
+            <p class="distancia">À <strong>5km</strong> de distância</p>
+          </div>
 
-					<div class="localizacao">
-						<i class="fa-solid fa-location-dot"></i>
-						<p class="localData">
-							Maringá, Zona 07 | 14 de Set, 12:02
-						</p>
-					</div>
+          <div class="localizacao">
+            <i class="fa-solid fa-location-dot"></i>
+            <p class="localData">Maringá, Zona 07 | 14 de Set, 12:02</p>
+          </div>
 
-					<div class="botoes">
-						<div>
-							<button
-								class="outlined-button"
-								title="Favoritar produto"
-							>
-								<i class="fa-solid fa-heart"></i>
-								<span>Favoritar</span>
-							</button>
-							<button
-								class="outlined-button"
-								title="Compartilhar produto"
-							>
-								<i class="fa-solid fa-share-nodes"></i>
-								<span>Compartilhar</span>
-							</button>
-							<button
-								class="outlined-button"
-								title="Denunciar produto"
-							>
-								<i class="fa-solid fa-flag"></i>
-								<span>Compartilhar</span>
-							</button>
-						</div>
-						<button
-							title="Entrar em contato com o vendedor"
-							class="primary-button"
-						>
-							Contato
-						</button>
-					</div>
-				</div>
-			</div>
-		</main>
+          <div class="botoes">
+            <div>
+              <button class="outlined-button" title="Favoritar produto">
+                <i class="fa-solid fa-heart"></i>
+                <span>Favoritar</span>
+              </button>
+              <button class="outlined-button" title="Compartilhar produto">
+                <i class="fa-solid fa-share-nodes"></i>
+                <span>Compartilhar</span>
+              </button>
+              <button class="outlined-button" title="Denunciar produto">
+                <i class="fa-solid fa-flag"></i>
+                <span>Compartilhar</span>
+              </button>
+            </div>
+            <button
+              title="Entrar em contato com o vendedor"
+              class="primary-button"
+							id="productContactButton"
+            >
+              Contato
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
 
-		<footer class="footer">
-			<div>
-				<h3>Links</h3>
-				<ul>
-					<li><a href="/index.html">Home</a></li>
-					<li><a href="/src/views/login.html">Login</a></li>
-					<li><a href="/src/views/products.html">Produtos</a></li>
-				</ul>
-			</div>
-			<div>
-				<h3>Fale conosco</h3>
-				<ul>
-					<li><a href="#">Whatsapp</a></li>
-					<li><a href="#">Instagram</a></li>
-					<li><a href="#">Email</a></li>
-				</ul>
-			</div>
-		</footer>
-	</body>
+    <footer class="footer">
+      <div>
+        <h3>Links</h3>
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/src/views/login.html">Login</a></li>
+          <li><a href="/src/views/products.html">Produtos</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Fale conosco</h3>
+        <ul>
+          <li><a href="#">Whatsapp</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Email</a></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
 </html>
