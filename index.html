@@ -26,6 +26,8 @@
 			rel="stylesheet"
 		/>
 
+		<script type="module" src="./app.js" defer></script>
+
 		<link rel="stylesheet" href="/src/styles/reset.css" />
 		<link rel="stylesheet" href="/src/styles/variables.css" />
 		<link rel="stylesheet" href="/src/styles/home.css" />
@@ -33,7 +35,7 @@
 	<body>
 		<nav class="navbar">
 			<div class="navbar__content">
-				<a href="/src/index.html">
+				<a href="/index.html" class="navbarLink">
 					<img
 						src="/src/assets/images/FVMLogoWithoutText.png"
 						alt="Logo da FVM"
@@ -50,7 +52,7 @@
 			<a
 				href="/src/views/login.html"
 				title="Clique para entrar"
-				class="navbar__login-button"
+				class="navbar__login-button navbarLink"
 			>
 				Entrar
 			</a>
@@ -170,7 +172,7 @@
 			<div>
 				<h3>Links</h3>
 				<ul>
-					<li><a href="/src/index.html">Home</a></li>
+					<li><a href="/index.html">Home</a></li>
 					<li><a href="/src/views/login.html">Login</a></li>
 					<li><a href="/src/views/products.html">Produtos</a></li>
 				</ul>
