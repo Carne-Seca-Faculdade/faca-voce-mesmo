@@ -18,3 +18,8 @@ filterModal.addEventListener("click", (event) => {
   filterModal.classList.add("hidden")
 })
 
+window.addEventListener("keydown", (event) => {
+  if (event.key !== "Escape") return
+
+  filterModal.classList.add("hidden")
+})
