@@ -6,9 +6,9 @@ O "Faça Você Mesmo (FVM)" é uma plataforma de comércio de ferramentas, inspi
 
 ## Tecnologias Utilizadas
 
--   **HTML** - Estrutura base do projeto.
--   **CSS** - Estilização e design das páginas.
--   **JavaScript** - Funcionalidades dinâmicas e interatividade.
+- **HTML** - Estrutura base do projeto.
+- **CSS** - Estilização e design das páginas.
+- **JavaScript** - Funcionalidades dinâmicas e interatividade.
 
 ## Objetivo
 

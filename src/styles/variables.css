@@ -1,12 +1,12 @@
 :root {
-	--colorWhite: #ffffff;
-	--colorBlack: #000000;
-	--textWhite: #ffffff;
-	--textBlack: #000000;
-	--textGray: #999999;
-	--colorPrimary: #2552a7;
-	--colorSecondary: #4480ef;
-	--colorNeutral-100: #f5f6f7;
-	--colorNeutral-200: #e7e7e7;
-	--colorNeutral-300: #3c4453;
+  --colorWhite: #ffffff;
+  --colorBlack: #000000;
+  --textWhite: #ffffff;
+  --textBlack: #000000;
+  --textGray: #999999;
+  --colorPrimary: #2552a7;
+  --colorSecondary: #4480ef;
+  --colorNeutral-100: #f5f6f7;
+  --colorNeutral-200: #e7e7e7;
+  --colorNeutral-300: #3c4453;
 }
