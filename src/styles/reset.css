@@ -141,6 +141,7 @@ button {
 body,
 input,
 textarea,
+select,
 button {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
