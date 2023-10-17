@@ -44,12 +44,15 @@
             <div class="modal__content__filters">
               <div>
                 <label id="priceRangeFilter">Preço</label>
-                <div class="filter__input-wrapper">
-                  <div class="filter__input-slider">
-                    <span>500</span>
-                  </div>
-                  <div class="filter__input-container">
-                    <span>R$0</span>
+                <div class="filter__input-container">
+                  <span>R$0</span>
+                  <div class="filter__input-slider-wrapper">
+                    <div
+                      class="filter__input-slider"
+                      id="priceRangeFilterSlider"
+                    >
+                      500
+                    </div>
                     <input
                       type="range"
                       name="priceRange"
@@ -58,18 +61,21 @@
                       min="0"
                       max="1000"
                     />
-                    <span>R$1000</span>
                   </div>
+                  <span>R$1000</span>
                 </div>
               </div>
               <div>
                 <label id="distanceRangeFilter">Distância</label>
-                <div class="filter__input-wrapper">
-                  <div class="filter__input-slider">
-                    <span>50</span>
-                  </div>
-                  <div class="filter__input-container">
-                    <span>0km</span>
+                <div class="filter__input-container">
+                  <span>0km</span>
+                  <div class="filter__input-slider-wrapper">
+                    <div
+                      class="filter__input-slider"
+                      id="distanceRangeFilterSlider"
+                    >
+                      50
+                    </div>
                     <input
                       type="range"
                       name="distanceRange"
@@ -78,8 +84,8 @@
                       min="0"
                       max="100"
                     />
-                    <span>100km</span>
                   </div>
+                  <span>100km</span>
                 </div>
               </div>
               <div>

@@ -73,10 +73,15 @@ filterModal.addEventListener("click", (event) => {
 
 filterModalRangeInputs.forEach((rangeInput) => {
   rangeInput.addEventListener("input", (event) => {
-    const rangeInputValue = event.target.value;
+    const rangeInput = event.target;
+    const filterInputSlider = document.querySelector(`#${rangeInput.id}Slider`);
+    filterInputSlider.innerHTML = rangeInput.value;
+    filterInputSlider.classList.add("show");
+  });
+  rangeInput.addEventListener("blur", (event) => {
     const rangeInputId = event.target.id;
-    console.log(rangeInputValue);
-    console.log(rangeInputId);
+    const filterInputSlider = document.querySelector(`#${rangeInputId}Slider`);
+    filterInputSlider.classList.remove("show");
   });
 });
 
