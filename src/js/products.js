@@ -4,21 +4,30 @@ const closeFilterModalButton = document.querySelector(
 );
 const filterModal = document.querySelector("#filterModal");
 
+function closeModal(modalElement) {
+  modalElement.classList.add("hidden");
+}
+
+function openModal(modalElement) {
+  modalElement.classList.remove("hidden");
+}
+
 filterModalButton.addEventListener("click", () => {
-  filterModal.classList.remove("hidden");
+  openModal(filterModal);
 });
 
 closeFilterModalButton.addEventListener("click", () => {
-  filterModal.classList.add("hidden");
+  closeModal(filterModal);
 });
 
 filterModal.addEventListener("click", (event) => {
   const eventTargetId = event.target.id;
   if (eventTargetId !== "filterModal") return;
-  filterModal.classList.add("hidden");
+  closeModal(filterModal);
 });
 
 window.addEventListener("keydown", (event) => {
-  if (event.key !== "Escape") return;
-  filterModal.classList.add("hidden");
+  const filterModalClasses = filterModal.classList;
+  if (event.key !== "Escape" || filterModalClasses.contains("hidden")) return;
+  closeModal(filterModal);
 });
