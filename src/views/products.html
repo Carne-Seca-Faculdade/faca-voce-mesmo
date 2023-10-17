@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
@@ -40,9 +40,63 @@
         </button>
         <div class="modal__content">
           <h2>Filtros</h2>
-          <p>Preço</p>
-          <p>Distância</p>
-					<p>Categoria</p>
+          <form id="filterModalForm">
+            <div class="modal__content__filters">
+              <div>
+                <label id="priceRangeFilter">Preço</label>
+                <div class="filter__input-container">
+                  <span>R$0</span>
+                  <div class="filter__input-slider-wrapper">
+                    <div
+                      class="filter__input-slider"
+                      id="priceRangeFilterSlider"
+                    >
+                      500
+                    </div>
+                    <input
+                      type="range"
+                      name="priceRange"
+                      id="priceRangeFilter"
+                      class="form-range-input"
+                      min="0"
+                      max="1000"
+                    />
+                  </div>
+                  <span>R$1000</span>
+                </div>
+              </div>
+              <div>
+                <label id="distanceRangeFilter">Distância</label>
+                <div class="filter__input-container">
+                  <span>0km</span>
+                  <div class="filter__input-slider-wrapper">
+                    <div
+                      class="filter__input-slider"
+                      id="distanceRangeFilterSlider"
+                    >
+                      50
+                    </div>
+                    <input
+                      type="range"
+                      name="distanceRange"
+                      id="distanceRangeFilter"
+                      class="form-range-input"
+                      min="0"
+                      max="100"
+                    />
+                  </div>
+                  <span>100km</span>
+                </div>
+              </div>
+              <div>
+                <label id="categoryDropdownFilter">Categoria</label>
+                <select name="category" id="categoryDropdownFilter"></select>
+              </div>
+            </div>
+            <div class="modal__content__button">
+              <button class="primary-button">Aplicar</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
@@ -194,7 +248,7 @@
           </button>
           <img
             class="grid-product__image"
-            src="/src/assets//images/betorneira.webp"
+            src="/src/assets//images/betorneira.png"
           />
           <div class="grid-product__info">
             <h3>Betoneira 150 Litros 0,5CV Monofásica</h3>
@@ -210,7 +264,7 @@
           </button>
           <img
             class="grid-product__image"
-            src="/src/assets//images/betorneira.webp"
+            src="/src/assets//images/betorneira.png"
           />
           <div class="grid-product__info">
             <h3>Betoneira 150 Litros 0,5CV Monofásica</h3>
@@ -226,7 +280,7 @@
           </button>
           <img
             class="grid-product__image"
-            src="/src/assets//images/betorneira.webp"
+            src="/src/assets//images/betorneira.png"
           />
           <div class="grid-product__info">
             <h3>Betoneira 150 Litros 0,5CV Monofásica</h3>
@@ -242,7 +296,7 @@
           </button>
           <img
             class="grid-product__image"
-            src="/src/assets//images/betorneira.webp"
+            src="/src/assets//images/betorneira.png"
           />
           <div class="grid-product__info">
             <h3>Betoneira 150 Litros 0,5CV Monofásica</h3>
@@ -258,7 +312,7 @@
           </button>
           <img
             class="grid-product__image"
-            src="/src/assets//images/betorneira.webp"
+            src="/src/assets//images/betorneira.png"
           />
           <div class="grid-product__info">
             <h3>Betoneira 150 Litros 0,5CV Monofásica</h3>
@@ -274,7 +328,7 @@
           </button>
           <img
             class="grid-product__image"
-            src="/src/assets//images/betorneira.webp"
+            src="/src/assets//images/betorneira.png"
           />
           <div class="grid-product__info">
             <h3>Betoneira 150 Litros 0,5CV Monofásica</h3>
@@ -290,7 +344,7 @@
           </button>
           <img
             class="grid-product__image"
-            src="/src/assets//images/betorneira.webp"
+            src="/src/assets//images/betorneira.png"
           />
           <div class="grid-product__info">
             <h3>Betoneira 150 Litros 0,5CV Monofásica</h3>
@@ -306,7 +360,7 @@
           </button>
           <img
             class="grid-product__image"
-            src="/src/assets//images/betorneira.webp"
+            src="/src/assets//images/betorneira.png"
           />
           <div class="grid-product__info">
             <h3>Betoneira 150 Litros 0,5CV Monofásica</h3>
@@ -322,7 +376,7 @@
           </button>
           <img
             class="grid-product__image"
-            src="/src/assets//images/betorneira.webp"
+            src="/src/assets//images/betorneira.png"
           />
           <div class="grid-product__info">
             <h3>Betoneira 150 Litros 0,5CV Monofásica</h3>
@@ -338,7 +392,7 @@
           </button>
           <img
             class="grid-product__image"
-            src="/src/assets//images/betorneira.webp"
+            src="/src/assets//images/betorneira.png"
           />
           <div class="grid-product__info">
             <h3>Betoneira 150 Litros 0,5CV Monofásica</h3>
@@ -354,7 +408,7 @@
           </button>
           <img
             class="grid-product__image"
-            src="/src/assets//images/betorneira.webp"
+            src="/src/assets//images/betorneira.png"
           />
           <div class="grid-product__info">
             <h3>Betoneira 150 Litros 0,5CV Monofásica</h3>
@@ -370,7 +424,7 @@
           </button>
           <img
             class="grid-product__image"
-            src="/src/assets//images/betorneira.webp"
+            src="/src/assets//images/betorneira.png"
           />
           <div class="grid-product__info">
             <h3>Betoneira 150 Litros 0,5CV Monofásica</h3>
@@ -386,7 +440,7 @@
           </button>
           <img
             class="grid-product__image"
-            src="/src/assets//images/betorneira.webp"
+            src="/src/assets//images/betorneira.png"
           />
           <div class="grid-product__info">
             <h3>Betoneira 150 Litros 0,5CV Monofásica</h3>
@@ -402,7 +456,7 @@
           </button>
           <img
             class="grid-product__image"
-            src="/src/assets//images/betorneira.webp"
+            src="/src/assets//images/betorneira.png"
           />
           <div class="grid-product__info">
             <h3>Betoneira 150 Litros 0,5CV Monofásica</h3>
@@ -418,7 +472,7 @@
           </button>
           <img
             class="grid-product__image"
-            src="/src/assets//images/betorneira.webp"
+            src="/src/assets//images/betorneira.png"
           />
           <div class="grid-product__info">
             <h3>Betoneira 150 Litros 0,5CV Monofásica</h3>
@@ -434,7 +488,7 @@
           </button>
           <img
             class="grid-product__image"
-            src="/src/assets//images/betorneira.webp"
+            src="/src/assets//images/betorneira.png"
           />
           <div class="grid-product__info">
             <h3>Betoneira 150 Litros 0,5CV Monofásica</h3>
@@ -450,7 +504,7 @@
           </button>
           <img
             class="grid-product__image"
-            src="/src/assets//images/betorneira.webp"
+            src="/src/assets//images/betorneira.png"
           />
           <div class="grid-product__info">
             <h3>Betoneira 150 Litros 0,5CV Monofásica</h3>
@@ -466,7 +520,7 @@
           </button>
           <img
             class="grid-product__image"
-            src="/src/assets//images/betorneira.webp"
+            src="/src/assets//images/betorneira.png"
           />
           <div class="grid-product__info">
             <h3>Betoneira 150 Litros 0,5CV Monofásica</h3>
@@ -482,7 +536,7 @@
           </button>
           <img
             class="grid-product__image"
-            src="/src/assets//images/betorneira.webp"
+            src="/src/assets//images/betorneira.png"
           />
           <div class="grid-product__info">
             <h3>Betoneira 150 Litros 0,5CV Monofásica</h3>
@@ -498,7 +552,7 @@
           </button>
           <img
             class="grid-product__image"
-            src="/src/assets//images/betorneira.webp"
+            src="/src/assets//images/betorneira.png"
           />
           <div class="grid-product__info">
             <h3>Betoneira 150 Litros 0,5CV Monofásica</h3>
@@ -514,7 +568,7 @@
           </button>
           <img
             class="grid-product__image"
-            src="/src/assets//images/betorneira.webp"
+            src="/src/assets//images/betorneira.png"
           />
           <div class="grid-product__info">
             <h3>Betoneira 150 Litros 0,5CV Monofásica</h3>
@@ -530,7 +584,7 @@
           </button>
           <img
             class="grid-product__image"
-            src="/src/assets//images/betorneira.webp"
+            src="/src/assets//images/betorneira.png"
           />
           <div class="grid-product__info">
             <h3>Betoneira 150 Litros 0,5CV Monofásica</h3>
@@ -546,7 +600,7 @@
           </button>
           <img
             class="grid-product__image"
-            src="/src/assets//images/betorneira.webp"
+            src="/src/assets//images/betorneira.png"
           />
           <div class="grid-product__info">
             <h3>Betoneira 150 Litros 0,5CV Monofásica</h3>
@@ -562,7 +616,7 @@
           </button>
           <img
             class="grid-product__image"
-            src="/src/assets//images/betorneira.webp"
+            src="/src/assets//images/betorneira.png"
           />
           <div class="grid-product__info">
             <h3>Betoneira 150 Litros 0,5CV Monofásica</h3>
@@ -578,7 +632,7 @@
           </button>
           <img
             class="grid-product__image"
-            src="/src/assets//images/betorneira.webp"
+            src="/src/assets//images/betorneira.png"
           />
           <div class="grid-product__info">
             <h3>Betoneira 150 Litros 0,5CV Monofásica</h3>
@@ -594,7 +648,7 @@
           </button>
           <img
             class="grid-product__image"
-            src="/src/assets//images/betorneira.webp"
+            src="/src/assets//images/betorneira.png"
           />
           <div class="grid-product__info">
             <h3>Betoneira 150 Litros 0,5CV Monofásica</h3>
