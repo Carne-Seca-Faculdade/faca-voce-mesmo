@@ -9,3 +9,12 @@ filterModalButton.addEventListener("click", () => {
 closeFilterModalButton.addEventListener("click", () => {
   filterModal.classList.add("hidden")
 })
+
+filterModal.addEventListener("click", (event) => {
+  
+  const eventTargetId = event.target.id
+  if (eventTargetId !== "filterModal") return
+
+  filterModal.classList.add("hidden")
+})
+
