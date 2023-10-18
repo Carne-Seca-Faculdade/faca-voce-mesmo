@@ -80,7 +80,7 @@
   color: var(--textBlack);
 }
 
-.products__filters div {
+.filter-dropdown {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -92,7 +92,7 @@
   font-size: 1rem;
 }
 
-.products__filters div button {
+.filter-dropdown button {
   border: 0.5px solid var(--colorNeutral-300);
   border-radius: 8px;
   padding: 0.5rem;
@@ -103,8 +103,39 @@
   transition: all 0.3s ease-in-out;
 }
 
-.products__filters div button:hover {
+.filter-dropdown button:hover {
   opacity: 0.8;
+}
+
+.order-button {
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  z-index: 1;
+  padding: 0.5rem;
+  top: 230px;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 0.5rem;
+  color: var(--textBlack);
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.dropdown-content a:hover {
+  background-color: var(--colorNeutral-100);
+}
+
+.show {
+  display: block;
 }
 
 .products {

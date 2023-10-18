@@ -1,6 +1,6 @@
 const filterModalButton = document.querySelector("#filterModalButton");
 const closeFilterModalButton = document.querySelector(
-  "#closeFilterModalButton",
+  "#closeFilterModalButton"
 );
 const filterModal = document.querySelector("#filterModal");
 const filterModalForm = document.querySelector("#filterModalForm");
@@ -25,7 +25,7 @@ function handleFilterModalFormSubmit(event) {
 function loadFilterCategories() {
   console.log("LOAD CATEGORIES CALLED");
   const categoryDropdownFilter = document.querySelectorAll(
-    "#categoryDropdownFilter",
+    "#categoryDropdownFilter"
   );
   const categorySelect = categoryDropdownFilter[1];
   const categoriesList = [
@@ -94,3 +94,60 @@ window.addEventListener("keydown", (event) => {
 window.addEventListener("DOMContentLoaded", () => {
   loadFilterCategories();
 });
+
+function toggleOrderDropdown() {
+  var dropdown = document.getElementById("ordenacao-dropdown");
+  dropdown.classList.toggle("show");
+}
+
+function ordenarProdutos(opcao) {
+  var productsContainer = document.querySelector(".products");
+  var products = Array.from(
+    productsContainer.getElementsByClassName("grid-product")
+  );
+
+  products.sort(function (a, b) {
+    var precoA = parseFloat(
+      a
+        .querySelector(".grid-product__info strong")
+        .innerText.replace(/[^\d,-]/g, "")
+        .replace(",", ".")
+    );
+    var precoB = parseFloat(
+      b
+        .querySelector(".grid-product__info strong")
+        .innerText.replace(/[^\d,-]/g, "")
+        .replace(",", ".")
+    );
+
+    if (opcao === "maior-preco") {
+      return precoB - precoA;
+    } else if (opcao === "menor-preco") {
+      return precoA - precoB;
+    }
+
+    return 0;
+  });
+
+  products.forEach(function (product) {
+    productsContainer.removeChild(product);
+  });
+
+  products.forEach(function (product) {
+    productsContainer.appendChild(product);
+  });
+
+  document.getElementById("ordenacao-dropdown").classList.remove("show");
+}
+
+window.onclick = function (event) {
+  if (!event.target.matches(".order-button")) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    for (var i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains("show")) {
+        openDropdown.classList.remove("show");
+      }
+    }
+  }
+};

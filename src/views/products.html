@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
@@ -129,7 +129,7 @@
     <main class="main">
       <div class="products__filters">
         <h2>Produtos disponíveis</h2>
-        <div>
+        <div class="filter-dropdown">
           <button
             class="button-icon"
             title="Abrir menu de filtros"
@@ -137,9 +137,19 @@
           >
             <i class="fa-solid fa-filter"></i>
           </button>
-          <button class="filters__order-by-button">
-            Ordenar por <i class="fa-solid fa-angle-down"></i>
-          </button>
+          <div class="dropdown-container">
+            <button class="order-button" onclick="toggleOrderDropdown()">
+              Ordenar por <i class="fa-solid fa-angle-down"></i>
+            </button>
+            <div id="ordenacao-dropdown" class="dropdown-content">
+              <a href="#" onclick="ordenarProdutos('maior-preco')"
+                >Maior Preço</a
+              >
+              <a href="#" onclick="ordenarProdutos('menor-preco')"
+                >Menor Preço</a
+              >
+            </div>
+          </div>
         </div>
       </div>
       <section class="products">
@@ -154,7 +164,7 @@
           <div class="grid-product__info">
             <h3>Betoneira 150 Litros 0,5CV Monofásica</h3>
             <div>
-              <strong>R$ 2.400,00</strong>
+              <strong>R$ 2.330,00</strong>
               <strong>5km</strong>
             </div>
           </div>
@@ -170,7 +180,7 @@
           <div class="grid-product__info">
             <h3>Betoneira 150 Litros 0,5CV Monofásica</h3>
             <div>
-              <span><strong>R$ 2.400,00</strong></span>
+              <span><strong>R$ 2.330,40</strong></span>
               <strong>5km</strong>
             </div>
           </div>
@@ -186,7 +196,7 @@
           <div class="grid-product__info">
             <h3>Betoneira 150 Litros 0,5CV Monofásica</h3>
             <div>
-              <span><strong>R$ 2.400,00</strong></span>
+              <span><strong>R$ 1.430,00</strong></span>
               <strong>5km</strong>
             </div>
           </div>
@@ -202,7 +212,7 @@
           <div class="grid-product__info">
             <h3>Betoneira 150 Litros 0,5CV Monofásica</h3>
             <div>
-              <span><strong>R$ 2.400,00</strong></span>
+              <span><strong>R$ 430,00</strong></span>
               <strong>5km</strong>
             </div>
           </div>
@@ -218,7 +228,7 @@
           <div class="grid-product__info">
             <h3>Betoneira 150 Litros 0,5CV Monofásica</h3>
             <div>
-              <span><strong>R$ 2.400,00</strong></span>
+              <span><strong>R$ 400,00</strong></span>
               <strong>5km</strong>
             </div>
           </div>
@@ -234,7 +244,7 @@
           <div class="grid-product__info">
             <h3>Betoneira 150 Litros 0,5CV Monofásica</h3>
             <div>
-              <span><strong>R$ 2.400,00</strong></span>
+              <span><strong>R$ 4.300,00</strong></span>
               <strong>5km</strong>
             </div>
           </div>
