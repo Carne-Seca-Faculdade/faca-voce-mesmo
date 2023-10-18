@@ -11,7 +11,6 @@ closeFilterModalButton.addEventListener("click", () => {
 })
 
 filterModal.addEventListener("click", (event) => {
-  
   const eventTargetId = event.target.id
   if (eventTargetId !== "filterModal") return
 

@@ -1,69 +1,80 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-		<title>FVM - Compra e Venda de Ferramentas</title>
+    <title>FVM - Compra e Venda de Ferramentas</title>
 
-		<link
-			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
-			rel="stylesheet"
-		/>
-		<link
-			rel="shortcut icon"
-			href="/src/assets/images/favicon.ico"
-			type="image/x-icon"
-		/>
-		<link rel="stylesheet" href="/src/styles/reset.css" />
-		<link rel="stylesheet" href="/src/styles/variables.css" />
-		<link rel="stylesheet" href="/src/styles/register.css" />
-	</head>
-	<body>
-		<main class="main">
-			<div id="main-container">
-				<div id="form-container">
-					<div id="form-box">
-						<a href="/index.html"
-							><img
-								id="logo-GID"
-								src="/src/assets/images/FVMLogoWithText.png"
-								alt="Logo da FVM"
-						/></a>
-						<form id="login-form">
-							<input
-								type="text"
-								name="username"
-								placeholder="Número de telefone, usuário ou e-mail"
-							/>
-							<input
-								type="password"
-								name="password"
-								placeholder="Senha"
-							/>
-							<input type="submit" value="Entrar" />
-						</form>
-						<div class="separator">
-							<div class="line"></div>
-							<span>Ou</span>
-						</div>
-						<div id="other-links">
-							<div id="forgot-pass">
-								<a href="#">Esqueceu a senha?</a>
-							</div>
-						</div>
-					</div>
-					<div id="register-container">
-						<p>
-							Não tem uma conta?
-							<a href="/src/views/signup.html">Cadastre-se</a>
-						</p>
-					</div>
-				</div>
-			</div>
-		</main>
-	</body>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="/src/assets/images/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="/src/styles/reset.css" />
+    <link rel="stylesheet" href="/src/styles/variables.css" />
+    <link rel="stylesheet" href="/src/styles/register.css" />
+    
+
+    <script src="/src/js/validation.js" defer></script>
+  </head>
+  <body>
+    <main class="main">
+      <div id="main-container">
+        <div id="form-container">
+          <div id="form-box">
+            <a href="/index.html"
+              ><img
+                id="logo-GID"
+                src="/src/assets/images/FVMLogoWithText.png"
+                alt="Logo da FVM"
+            /></a>
+            <form id="login-form">
+              <input
+                class="inputLogin"
+                id="userLogin"
+                type="text"
+                name="username"
+                placeholder="Usuário"
+                data-required
+              />
+              <input
+                class="inputLogin"
+                id="passwordLogin"
+                type="password"
+                name="password"
+                placeholder="Senha"
+                data-min-length="8"
+                data-max-length="8"
+              />
+              <input id="enterLogin" type="submit" value="Entrar" />
+            </form>
+            <div class="separator">
+              <div class="line"></div>
+              <span>Ou</span>
+            </div>
+            <div id="other-links">
+              <div id="forgot-pass">
+                <a href="#">Esqueceu a senha?</a>
+              </div>
+            </div>
+          </div>
+          <div id="register-container">
+            <p>
+              Não tem uma conta?
+              <a href="/src/views/register.html">Cadastre-se</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <p class="error-validation template"></p>
+  </body>
 </html>
