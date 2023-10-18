@@ -20,7 +20,7 @@ a {
 
 body {
   padding-top: 5vh;
-  background-image: url("/src/assets/images/loginBanner.png");
+  background-image: url("/src/assets/images/loginbanner.webp");
   background-size: cover;
   background-position-y: -150px;
 }
