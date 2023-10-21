@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
@@ -45,7 +45,30 @@
         </div>
       </div>
     </div>
-
+    <div class="modal hidden" id="editModal">
+      <div class="modal__card">
+        <button class="modal__close-button" id="closeEditModal">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="modal__content">
+          <h2>Editar Produto</h2>
+          <label for="produtoNome">Nome do Produto:</label>
+          <input
+            type="text"
+            id="produtoNome"
+            placeholder="Nome do produto"
+          /><br /><br />
+          <label for="produtoPreco">Preço:</label>
+          <input
+            type="number"
+            id="produtoPreco"
+            placeholder="Preço"
+          /><br /><br />
+          <button onclick="saveChanges()">Salvar</button>
+          <button onclick="closeModal()">Cancelar</button>
+        </div>
+      </div>
+    </div>
     <nav class="navbar">
       <div class="navbar__content">
         <a href="/index.html">
@@ -73,6 +96,15 @@
 
     <main class="main">
       <div class="produtosContainer">
+        <div class="dropdown">
+          <button onclick="toggleDropdown()" class="dropbtn">
+            <i class="fa-solid fa-cog"></i>
+          </button>
+          <div class="dropdown-content">
+            <a id="edit-product">Editar</a>
+            <a id="excluir-product">Excluir</a>
+          </div>
+        </div>
         <img
           class="image"
           src="/src/assets/images/betorneira.webp"

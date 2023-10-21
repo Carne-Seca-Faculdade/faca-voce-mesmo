@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
@@ -57,12 +57,77 @@
         Entrar
       </a>
     </nav>
-
     <main class="main">
+      <section class="carrosel">
+        <div class="carrosel-container">
+          <div class="carrosel-slider">
+            <div class="slide">
+              <img
+                src="src/assets/images/categoriaconstrucaoimage.webp"
+                alt="Slide 1"
+              />
+            </div>
+            <div class="slide">
+              <img
+                src="src/assets/images/categoriajardinagemimage.webp"
+                alt="Slide 2"
+              />
+            </div>
+            <div class="slide">
+              <img
+                src="src/assets/images/categorialimpezaimage.webp"
+                alt="Slide 3"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section__popular-equipment">
+        <div class="container__title">
+          <h2>Ferramentas Mais Alugadas</h2>
+        </div>
+        <ul class="popular-equipment">
+          <li class="equipment-card">
+            <a href="#" class="equipment-link">
+              <img src="src/assets/images/andaimes.jpg" alt="Equipamento 1" />
+              <div class="equipment-info">
+                <h3>andaimes</h3>
+              </div>
+            </a>
+          </li>
+          <li class="equipment-card">
+            <a href="#" class="equipment-link">
+              <img
+                src="src/assets/images/compactador.jpg"
+                alt="Equipamento 2"
+              />
+              <div class="equipment-info">
+                <h3>compactadores</h3>
+              </div>
+            </a>
+          </li>
+          <li class="equipment-card">
+            <a href="#" class="equipment-link">
+              <img src="src/assets/images/betoneira.jpg" alt="Equipamento 3" />
+              <div class="equipment-info">
+                <h3>Furadeiras</h3>
+              </div>
+            </a>
+          </li>
+          <li class="equipment-card">
+            <a href="#" class="equipment-link">
+              <img src="src/assets/images/demolição.jpg" alt="Equipamento 3" />
+              <div class="equipment-info">
+                <h3>Demolidores</h3>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </section>
       <section class="hero">
         <div>
           <h1 class="hero__title">
-            Transforme ideias em realidade com as ferramentas certas
+            Faça você mesmo, Alugue as Ferramentas que você precisa.
           </h1>
           <p class="hero__description">
             A <abbr title="Faça Você Mesmo">FVM</abbr> conecta você com
@@ -77,7 +142,6 @@
           >
         </div>
       </section>
-
       <section class="about-container">
         <h2>Sobre Nós</h2>
         <ul>
@@ -182,5 +246,6 @@
         </ul>
       </div>
     </footer>
+    <script src="src/js/script.js"></script>
   </body>
 </html>

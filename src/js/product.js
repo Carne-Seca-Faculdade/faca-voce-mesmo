@@ -1,17 +1,35 @@
+function toggleModal(modalId) {
+  const modal = document.getElementById(modalId);
+  modal.classList.toggle("hidden");
+
+  function closeOnEscape(event) {
+    if (event.key === "Escape") {
+      modal.classList.add("hidden");
+      window.removeEventListener("keydown", closeOnEscape);
+    }
+  }
+
+  if (!modal.classList.contains("hidden")) {
+    window.addEventListener("keydown", closeOnEscape);
+  }
+}
+
 const productContactButton = document.querySelector("#productContactButton");
-const closeContactModal = document.querySelector("#closeContactModal");
-const contactModal = document.querySelector("#contactModal");
-
 productContactButton.addEventListener("click", () => {
-  contactModal.classList.remove("hidden");
+  toggleModal("contactModal");
 });
 
+const closeContactModal = document.querySelector("#closeContactModal");
 closeContactModal.addEventListener("click", () => {
-  contactModal.classList.add("hidden");
+  toggleModal("contactModal");
 });
 
-window.addEventListener("keydown", (event) => {
-  if (event.key !== "Escape") return;
+const editModal = document.querySelector("#edit-product");
+editModal.addEventListener("click", () => {
+  toggleModal("editModal");
+});
 
-  contactModal.classList.add("hidden");
+const closeEditModal = document.querySelector("#closeEditModal");
+closeEditModal.addEventListener("click", () => {
+  toggleModal("editModal");
 });
