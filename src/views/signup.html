@@ -19,7 +19,7 @@
       type="image/x-icon"
     />
 
-    <script type="module" src="/src/js/login.ts"></script>
+    <script src="/src/js/signup.ts" type="module" defer></script>
 
     <link rel="stylesheet" href="/src/styles/reset.css" />
     <link rel="stylesheet" href="/src/styles/variables.css" />
@@ -36,7 +36,8 @@
                 src="/src/assets/images/FVMLogoWithText.webp"
                 alt="Logo da FVM"
             /></a>
-            <form class="login-form" id="loginForm">
+            <form class="login-form" id="signupForm">
+              <input type="text" name="name" placeholder="Nome" required />
               <input type="email" name="email" placeholder="Email" required />
               <input
                 type="password"
@@ -45,14 +46,14 @@
                 required
                 minlength="8"
               />
-              <button class="primary-button">Entrar</button>
+              <button type="submit" class="primary-button">Criar conta</button>
             </form>
             <p id="errorContainer" class="error-container"></p>
           </div>
           <div id="register-container">
             <p>
-              Não tem uma conta?
-              <a href="/src/views/signup.html">Cadastre-se</a>
+              Já possui uma conta?
+              <a href="/src/views/login.html">Login</a>
             </p>
           </div>
         </div>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
@@ -26,14 +26,14 @@
       rel="stylesheet"
     />
 
-    <script src="/src/js/product.js" defer></script>
+    <script src="/src/js/product.js" type="module" defer></script>
     <link rel="stylesheet" href="/src/styles/reset.css" />
     <link rel="stylesheet" href="/src/styles/variables.css" />
     <link rel="stylesheet" href="/src/styles/product.css" />
   </head>
 
   <body>
-    <div class="modal hidden" id="contactModal">
+    <div class="hidden modal" id="contactModal">
       <div class="modal__card">
         <button class="modal__close-button" id="closeContactModal">
           <i class="fa-solid fa-xmark"></i>
@@ -45,30 +45,7 @@
         </div>
       </div>
     </div>
-    <div class="modal hidden" id="editModal">
-      <div class="modal__card">
-        <button class="modal__close-button" id="closeEditModal">
-          <i class="fa-solid fa-xmark"></i>
-        </button>
-        <div class="modal__content">
-          <h2>Editar Produto</h2>
-          <label for="produtoNome">Nome do Produto:</label>
-          <input
-            type="text"
-            id="produtoNome"
-            placeholder="Nome do produto"
-          /><br /><br />
-          <label for="produtoPreco">Preço:</label>
-          <input
-            type="number"
-            id="produtoPreco"
-            placeholder="Preço"
-          /><br /><br />
-          <button onclick="saveChanges()">Salvar</button>
-          <button onclick="closeModal()">Cancelar</button>
-        </div>
-      </div>
-    </div>
+
     <nav class="navbar">
       <div class="navbar__content">
         <a href="/index.html">
@@ -85,73 +62,18 @@
           </button>
         </form>
       </div>
-      <a
-        href="/src/views/login.html"
+      <button
         title="Clique para entrar"
         class="navbar__login-button"
+        id="loginButton"
       >
         Entrar
-      </a>
+      </button>
     </nav>
 
-    <main class="main">
-      <div class="produtosContainer">
-        <div class="dropdown">
-          <button onclick="toggleDropdown()" class="dropbtn">
-            <i class="fa-solid fa-cog"></i>
-          </button>
-          <div class="dropdown-content">
-            <a id="edit-product">Editar</a>
-            <a id="excluir-product">Excluir</a>
-          </div>
-        </div>
-        <img
-          class="image"
-          src="/src/assets/images/betorneira.webp"
-          alt="Betorneira"
-        />
-        <div class="texto">
-          <h3 class="nome">Betoneira 150 Litros 0,5CV Monofásica</h3>
-          <p class="descricao">
-            Betoneira CSM-CS150L com capacidade de mistura de 85 litros, ideal
-            para construções de pequeno porte. Equipada com motor de 0,5CV e
-            rotação de 34RPM. Garantia de 6 meses.
-          </p>
-
-          <div class="product__main-info">
-            <strong class="preco">R$ 2.400,00</strong>
-            <p class="distancia">À <strong>5km</strong> de distância</p>
-          </div>
-
-          <div class="localizacao">
-            <i class="fa-solid fa-location-dot"></i>
-            <p class="localData">Maringá, Zona 07 | 14 de Set, 12:02</p>
-          </div>
-
-          <div class="botoes">
-            <div>
-              <button class="outlined-button" title="Favoritar produto">
-                <i class="fa-solid fa-heart"></i>
-                <span>Favoritar</span>
-              </button>
-              <button class="outlined-button" title="Compartilhar produto">
-                <i class="fa-solid fa-share-nodes"></i>
-                <span>Compartilhar</span>
-              </button>
-              <button class="outlined-button" title="Denunciar produto">
-                <i class="fa-solid fa-flag"></i>
-                <span>Compartilhar</span>
-              </button>
-            </div>
-            <button
-              title="Entrar em contato com o vendedor"
-              class="primary-button"
-              id="productContactButton"
-            >
-              Contato
-            </button>
-          </div>
-        </div>
+    <main class="main main-loading" id="productContainer">
+      <div class="text-5xl text-primary">
+        <i class="fa-solid fa-spinner animate-spin"></i>
       </div>
     </main>
 

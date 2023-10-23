@@ -1,5 +1,5 @@
 body {
-  background-image: url("/src/assets/images/loginbanner.webp");
+  background-image: url("/src/assets/images/loginBanner.webp");
   background-size: cover;
 }
 
@@ -23,21 +23,23 @@ body {
   border: 1px solid #dbdbdb;
   width: 350px;
   margin-top: 30px;
+  padding: 1rem;
 }
 
 #logo-GID {
   max-width: 200px;
   height: auto;
   border-radius: 10%;
+  margin: 0 auto;
 }
 
-#login-form {
+.login-form {
   margin: 20px 0;
 }
 
-#login-form input {
+.login-form input {
   display: block;
-  font-size: 12px;
+  font-size: 1rem;
   padding: 12px 9px;
   background-color: #fafafa;
   border: 1px solid #dbdbdb;
@@ -46,15 +48,29 @@ body {
   margin: 5px auto;
 }
 
-#login-form input[type="submit"] {
-  background-color: #2552a7;
-  color: #fff;
-  margin-top: 15px;
-  border-radius: 5px;
-  height: 30px;
-  font-size: 13px;
-  padding: 0;
-  font-weight: bold;
+.primary-button {
+  display: block;
+  text-align: center;
+  width: fit-content;
+  text-decoration: none;
+  background-color: var(--colorPrimary);
+  color: var(--textWhite);
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  margin: 0 auto;
+  min-width: 50%;
+  transition: all 0.3s ease-in-out;
+}
+
+.error-container {
+  color: #ed4956;
+  font-weight: 500;
+  font-size: 1rem;
+  min-height: 1.25rem;
+}
+
+.primary-button:hover {
+  background-color: var(--colorSecondary);
 }
 
 .separator {
@@ -164,55 +180,3 @@ body {
     margin-bottom: 10px;
   }
 }
-
-body p {
-	color: red;
-	font-size: 0.70rem;
-}
-
-.modal {
-  background-color: rgba(0, 0, 0, 0.5);
-  position: fixed;
-  inset: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.modal__card {
-  position: relative;
-  background-color: var(--colorWhite);
-  border-radius: 8px;
-  padding: 1rem;
-  width: 90%;
-  max-width: 500px;
-}
-
-.modal__close-button {
-  position: absolute;
-  top: -8px;
-  right: -8px;
-  background-color: var(--colorWhite);
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.5rem 0.625rem;
-  border-radius: 100%;
-  font-size: 1.25rem;
-}
-
-.modal__content h2 {
-  font-size: 1.25rem;
-  font-weight: 500;
-  margin-bottom: 0.5rem;
-}
-
-.modal__content p {
-	font-size: 1rem;
-	margin-bottom: 0.25rem;
-}
-.hidden {
-  
-}
-

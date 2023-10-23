@@ -1,199 +1,220 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <title>FVM - Compra e Venda de Ferramentas</title>
 
-  <title>FVM - Compra e Venda de Ferramentas</title>
+    <link
+      rel="shortcut icon"
+      href="/src/assets/images/favicon.ico"
+      type="image/x-icon"
+    />
 
-  <link rel="shortcut icon" href="/src/assets/images/favicon.ico" type="image/x-icon" />
+    <script
+      src="https://kit.fontawesome.com/e7fc9f162e.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
 
-  <script src="https://kit.fontawesome.com/e7fc9f162e.js" crossorigin="anonymous" defer></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <script type="module" src="./app.ts" defer></script>
 
-  <script type="module" src="./app.js" defer></script>
+    <link rel="stylesheet" href="/src/styles/reset.css" />
+    <link rel="stylesheet" href="/src/styles/variables.css" />
+    <link rel="stylesheet" href="/src/styles/index.css" />
+  </head>
+  <body class="flex flex-col min-h-[100svh] relative">
+    <div
+      id="toastNotificationsContainer"
+      class="fixed flex flex-col gap-2 -translate-x-1/2 left-1/2 top-2 md:bottom-2 right-2 md:-translate-x-0 md:left-auto md:top-auto w-[200px] md:w-[250px]"
+    ></div>
 
-  <link rel="stylesheet" href="/src/styles/reset.css" />
-  <link rel="stylesheet" href="/src/styles/variables.css" />
-  <link rel="stylesheet" href="/src/styles/home.css" />
-</head>
-
-<body>
-  <nav class="navbar">
-    <div class="navbar__content">
-      <a href="/index.html" class="navbarLink">
-        <img src="/src/assets/images/FVMLogoWithText.webp" alt="Logo da FVM" class="navbar__logo" />
-      </a>
-      <form class="navbar__search-form">
-        <input type="text" placeholder="Buscar ferramentas" />
-        <button type="submit">
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </button>
-      </form>
-    </div>
-    <a href="/src/views/login.html" title="Clique para entrar" class="navbar__login-button navbarLink">
-      Entrar
-    </a>
-  </nav>
-  <main class="main">
-    <section class="carrosel">
-      <div class="carrosel-container">
-        <div class="carrosel-slider">
-          <div class="slide">
-            <img src="src/assets/images/categoriaconstrucaoimage.webp" alt="Slide 1" />
-          </div>
-          <div class="slide">
-            <img src="src/assets/images/categoriajardinagemimage.webp" alt="Slide 2" />
-          </div>
-          <div class="slide">
-            <img src="src/assets/images/categorialimpezaimage.webp" alt="Slide 3" />
-          </div>
+    <nav
+      class="bg-white-custom flex items-center border-b border-neutral-200 justify-between overflow-hidden py-3 px-5 max-h-[80px] lg:gap-10"
+    >
+      <div class="flex items-center justify-center gap-3">
+        <a href="/" class="w-[60px] h-full pageLink">
+          <img
+            src="/src/assets/images/FVMLogoWithText.webp"
+            alt="Logo da FVM"
+          />
+        </a>
+        <form
+          id="navbarSearchForm"
+          class="p-2 rounded-lg items-center justify-center gap-2 min-w-[300px] bg-neutral-200 hidden md:flex"
+        >
+          <input
+            type="text"
+            name="searchQuery"
+            placeholder="Buscar ferramentas"
+            class="flex-1 text-sm text-black-custom placeholder:text-text-gray"
+          />
+          <button type="submit" class="text-neutral-300">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+      </div>
+      <div
+        class="flex items-center justify-between gap-10 lg:flex-1 max-w-[600px]"
+      >
+        <ul
+          class="items-center flex-1 hidden gap-4 justify-evenly lg:flex lg:flex-1"
+        >
+          <li>
+            <a
+              href="/"
+              class="transition-all duration-300 ease-in-out text-neutral-300 hover:text-secondary pageLink"
+            >
+              Home
+            </a>
+          </li>
+          <li>
+            <button
+              id="navbarMyProductsButton"
+              class="transition-all duration-300 ease-in-out text-neutral-300 hover:text-secondary"
+            >
+              Meus Anúncios
+            </button>
+          </li>
+          <li>
+            <a
+              href="/products"
+              class="transition-all duration-300 ease-in-out text-neutral-300 hover:text-secondary pageLink"
+              >Produtos</a
+            >
+          </li>
+        </ul>
+        <div class="flex items-center justify-center gap-2">
+          <button
+            id="navbarLoginButton"
+            title="Clique para entrar"
+            class="block px-4 py-3 text-center border border-neutral-300 text-neutral-300 rounded-full min-w-[120px] text-sm transition-all duration-300 ease-in-out hover:bg-secondary hover:text-white-custom hover:border-transparent"
+          >
+            Entrar
+          </button>
+          <button
+            id="navbarCreateProductButton"
+            title="Clique para anunciar"
+            class="px-4 py-3 text-center border rounded-full min-w-[120px] text-sm transition-all duration-300 ease-in-out bg-primary text-white-custom hover:bg-secondary hidden sm:block"
+          >
+            Anunciar
+          </button>
         </div>
       </div>
-    </section>
-    <section class="section__popular-equipment">
-      <div class="container__title">
-        <h2>Ferramentas Mais Alugadas</h2>
+    </nav>
+
+    <main class="flex-1" id="app"></main>
+
+    <footer
+      class="flex flex-wrap items-center justify-around px-4 py-8 text-center border-t border-neutral-200"
+    >
+      <div class="min-w-[200px] w-full md:w-auto">
+        <h3 class="mt-3 mb-2 text-lg font-medium text-black-custom">
+          Categorias
+        </h3>
+        <ul
+          class="grid items-center justify-center grid-cols-2 gap-x-8 gap-y-2 max-w-[300px] mx-auto"
+        >
+          <li>
+            <a
+              class="transition-all duration-300 ease-in-out hover:text-secondary pageLink"
+              href="/products?category=gardening"
+              >Jardinagem</a
+            >
+          </li>
+          <li>
+            <a
+              class="transition-all duration-300 ease-in-out hover:text-secondary pageLink"
+              href="/products?category=construction"
+              >Construção</a
+            >
+          </li>
+          <li>
+            <a
+              class="transition-all duration-300 ease-in-out hover:text-secondary pageLink"
+              href="/products?category=cleaning"
+              >Limpeza</a
+            >
+          </li>
+          <li>
+            <a
+              class="transition-all duration-300 ease-in-out hover:text-secondary pageLink"
+              href="/products?category=electrical"
+              >Elétrica</a
+            >
+          </li>
+          <li>
+            <a
+              class="transition-all duration-300 ease-in-out hover:text-secondary pageLink"
+              href="/products?category=painting"
+              >Pintura</a
+            >
+          </li>
+        </ul>
       </div>
-      <ul class="popular-equipment">
-        <li class="equipment-card">
-          <a href="#" class="equipment-link">
-            <img src="src/assets/images/andaimes.jpg" alt="Equipamento 1" />
-            <div class="equipment-info">
-              <h3>andaimes</h3>
-            </div>
-          </a>
-        </li>
-        <li class="equipment-card">
-          <a href="#" class="equipment-link">
-            <img src="src/assets/images/compactador.jpg" alt="Equipamento 2" />
-            <div class="equipment-info">
-              <h3>compactadores</h3>
-            </div>
-          </a>
-        </li>
-        <li class="equipment-card">
-          <a href="#" class="equipment-link">
-            <img src="src/assets/images/betoneira.jpg" alt="Equipamento 3" />
-            <div class="equipment-info">
-              <h3>Furadeiras</h3>
-            </div>
-          </a>
-        </li>
-        <li class="equipment-card">
-          <a href="#" class="equipment-link">
-            <img src="src/assets/images/demolição.jpg" alt="Equipamento 3" />
-            <div class="equipment-info">
-              <h3>Demolidores</h3>
-            </div>
-          </a>
-        </li>
-      </ul>
-    </section>
-    <section class="hero">
-      <div>
-        <h1 class="hero__title">
-          Faça você mesmo, Alugue as Ferramentas que você precisa.
-        </h1>
-        <p class="hero__description">
-          A <abbr title="Faça Você Mesmo">FVM</abbr> conecta você com
-          vendedores de ferramentas de todo o país. Compre, venda e encontre
-          exatamente o que precisa para seu próximo projeto.
-        </p>
-        <a class="primary-button" title="Clique para ver os anúncios" href="/src/views/products.html">Ver Anúncios</a>
+      <div class="min-w-[200px]">
+        <h3 class="mt-3 mb-2 text-lg font-medium text-black-custom">Links</h3>
+        <ul class="flex flex-col gap-2">
+          <li>
+            <a
+              class="transition-all duration-300 ease-in-out hover:text-secondary pageLink"
+              href="/"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              class="transition-all duration-300 ease-in-out hover:text-secondary pageLink"
+              href="/register"
+              >Registro</a
+            >
+          </li>
+          <li>
+            <a
+              class="transition-all duration-300 ease-in-out hover:text-secondary pageLink"
+              href="/products"
+              >Produtos</a
+            >
+          </li>
+        </ul>
       </div>
-    </section>
-    <section class="about-container">
-      <h2>Sobre Nós</h2>
-      <ul>
-        <li>
-          <h3>Compra e Venda</h3>
-          <p>
-            Nossa plataforma foi criada para facilitar a transação de
-            ferramentas, conectando compradores e vendedores em um ambiente
-            seguro e confiável. Valorizamos a qualidade, a transparência e a
-            satisfação em cada negócio realizado.
-          </p>
-        </li>
-        <li>
-          <h3>Acesso Simplificado</h3>
-          <p>
-            Entendemos a importância de uma experiência do usuário eficaz. Por
-            isso, priorizamos um design intuitivo e recursos ágeis, garantindo
-            que você encontre o que procura com facilidade e rapidez, seja no
-            desktop ou no celular.
-          </p>
-        </li>
-        <li>
-          <h3>Produtos Acessíveis</h3>
-          <p>
-            Nossa motivação inicial foi criar um espaço onde pessoas pudessem
-            encontrar ferramentas de qualidade, muitas vezes usadas, a preços
-            mais acessíveis. Ao conectar vendedores e compradores, facilitamos
-            o acesso a produtos de valor com custos reduzidos, beneficiando
-            ambas as partes.
-          </p>
-        </li>
-      </ul>
-
-      <a class="primary-button" title="Clique para ver mais" href="/src/views/products.html">Saiba mais</a>
-    </section>
-
-    <section class="tools-container">
-      <h2>Categorias</h2>
-
-      <section class="tools-container__content">
-        <article class="tools-container__card">
-          <img class="card__image" src="/src/assets/images/categoriaJardinagemImage.jpg"
-            alt="Categoria de Jardinagem" />
-          <div class="card__content">
-            <h3>Jardinagem</h3>
-          </div>
-        </article>
-        <article class="tools-container__card">
-          <img class="card__image" src="/src/assets/images/categoriaConstrucaoImage.jpg"
-            alt="Categoria de Construção" />
-          <div class="card__content">
-            <h3>Construção</h3>
-          </div>
-        </article>
-        <article class="tools-container__card">
-          <img class="card__image" src="/src/assets/images/categoriaLimpezaImage.jpg" alt="Categoria de Limpeza" />
-          <div class="card__content">
-            <h3>Limpeza</h3>
-          </div>
-        </article>
-      </section>
-
-      <a class="primary-button" title="Clique para ver todas as categorias" href="/src/views/products.html">Ver
-        Categorias</a>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div>
-      <h3>Links</h3>
-      <ul>
-        <li><a href="/index.html">Home</a></li>
-        <li><a href="/src/views/login.html">Login</a></li>
-        <li><a href="/src/views/products.html">Produtos</a></li>
-      </ul>
-    </div>
-    <div>
-      <h3>Fale conosco</h3>
-      <ul>
-        <li><a href="#">Whatsapp</a></li>
-        <li><a href="#">Instagram</a></li>
-        <li><a href="#">Email</a></li>
-      </ul>
-    </div>
-  </footer>
-  <script src="src/js/script.js"></script>
-</body>
-
+      <div class="min-w-[200px]">
+        <h3 class="mt-3 mb-2 text-lg font-medium text-black-custom">
+          Fale conosco
+        </h3>
+        <ul class="flex flex-col gap-2">
+          <li>
+            <a
+              class="transition-all duration-300 ease-in-out hover:text-secondary pageLink"
+              href="/"
+              >Whatsapp</a
+            >
+          </li>
+          <li>
+            <a
+              class="transition-all duration-300 ease-in-out hover:text-secondary pageLink"
+              href="/"
+              >Instagram</a
+            >
+          </li>
+          <li>
+            <a
+              class="transition-all duration-300 ease-in-out hover:text-secondary pageLink"
+              href="/"
+              >Email</a
+            >
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
 </html>

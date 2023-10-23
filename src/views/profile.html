@@ -21,6 +21,8 @@
       defer
     ></script>
 
+    <script type="module" src="../js/profile.ts" defer></script>
+
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
@@ -47,187 +49,60 @@
           </button>
         </form>
       </div>
-      <a
-        href="/src/views/login.html"
+      <button
         title="Clique para entrar"
+        id="loginButton"
         class="navbar__login-button"
       >
         Entrar
-      </a>
+      </button>
     </nav>
 
     <main class="main">
-      <aside class="sidebar">
-        <div class="user-info">
-          <div>
-            <span class="user__name">Alexandre da Silva</span>
-            <button title="Compartilhar perfil">
-              <i class="fa-solid fa-share-nodes"></i>
-            </button>
-          </div>
-          <div>
-            <i class="fa-regular fa-calendar"></i>
-            <span>Na FVM desde 2014</span>
-          </div>
-          <div>
-            <i class="fa-solid fa-location-dot"></i>
-            <span>Santa Felicidade, Curitiba - PR</span>
-          </div>
-        </div>
-      </aside>
-
-      <div class="profile-content">
-        <h2>Anúncios do vendedor</h2>
-        <span>8 anúncios publicados</span>
-        <div>
-          <div class="products__filters">
-            <div class="search-input">
-              <i class="fa-solid fa-magnifying-glass"></i>
-              <input type="text" placeholder="Ex: Fiat Uno" />
+      <div>
+        <aside class="sidebar">
+          <div class="user-info">
+            <div>
+              <span class="user__name">Alexandre da Silva</span>
+              <button title="Compartilhar perfil">
+                <i class="fa-solid fa-share-nodes"></i>
+              </button>
             </div>
             <div>
-              <button class="button-icon">
-                <i class="fa-solid fa-filter"></i>
-              </button>
-              <button class="button-icon">
-                <i class="fa-solid fa-table-cells-large"></i>
-              </button>
-              <button class="filters__order-by-button">
-                Ordenar por
-                <i class="fa-solid fa-angle-down"></i>
-              </button>
+              <i class="fa-regular fa-calendar"></i>
+              <span>Na FVM desde 2014</span>
+            </div>
+            <div>
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Santa Felicidade, Curitiba - PR</span>
             </div>
           </div>
-          <section class="products">
-            <a href="/src/views/product.html" class="grid-product">
-              <button class="grid-product__like-button">
-                <i class="fa-regular fa-heart"></i>
-              </button>
-              <img
-                class="grid-product__image"
-                src="/src/assets//images/betorneira.webp"
-              />
-              <div class="grid-product__info">
-                <h3>Betoneira 150 Litros 0,5CV Monofásica</h3>
-                <div>
-                  <strong>R$ 2.400,00</strong>
-                  <strong>5km</strong>
-                </div>
+        </aside>
+
+        <div class="profile-content">
+          <h2>Anúncios do vendedor</h2>
+          <span>8 anúncios publicados</span>
+          <div>
+            <div class="products__filters">
+              <div class="search-input">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Ex: Fiat Uno" />
               </div>
-            </a>
-            <a href="/src/views/product.html" class="grid-product">
-              <button class="grid-product__like-button">
-                <i class="fa-regular fa-heart"></i>
-              </button>
-              <img
-                class="grid-product__image"
-                src="/src/assets//images/betorneira.webp"
-              />
-              <div class="grid-product__info">
-                <h3>Betoneira 150 Litros 0,5CV Monofásica</h3>
-                <div>
-                  <span><strong>R$ 2.400,00</strong></span>
-                  <strong>5km</strong>
-                </div>
+              <div>
+                <button class="button-icon">
+                  <i class="fa-solid fa-filter"></i>
+                </button>
+                <button class="button-icon">
+                  <i class="fa-solid fa-table-cells-large"></i>
+                </button>
+                <button class="filters__order-by-button">
+                  Ordenar por
+                  <i class="fa-solid fa-angle-down"></i>
+                </button>
               </div>
-            </a>
-            <a href="/src/views/product.html" class="grid-product">
-              <button class="grid-product__like-button">
-                <i class="fa-regular fa-heart"></i>
-              </button>
-              <img
-                class="grid-product__image"
-                src="/src/assets//images/betorneira.webp"
-              />
-              <div class="grid-product__info">
-                <h3>Betoneira 150 Litros 0,5CV Monofásica</h3>
-                <div>
-                  <strong>R$ 2.400,00</strong>
-                  <strong>5km</strong>
-                </div>
-              </div>
-            </a>
-            <a href="/src/views/product.html" class="grid-product">
-              <button class="grid-product__like-button">
-                <i class="fa-regular fa-heart"></i>
-              </button>
-              <img
-                class="grid-product__image"
-                src="/src/assets//images/betorneira.webp"
-              />
-              <div class="grid-product__info">
-                <h3>Betoneira 150 Litros 0,5CV Monofásica</h3>
-                <div>
-                  <span><strong>R$ 2.400,00</strong></span>
-                  <strong>5km</strong>
-                </div>
-              </div>
-            </a>
-            <a href="/src/views/product.html" class="grid-product">
-              <button class="grid-product__like-button">
-                <i class="fa-regular fa-heart"></i>
-              </button>
-              <img
-                class="grid-product__image"
-                src="/src/assets//images/betorneira.webp"
-              />
-              <div class="grid-product__info">
-                <h3>Betoneira 150 Litros 0,5CV Monofásica</h3>
-                <div>
-                  <strong>R$ 2.400,00</strong>
-                  <strong>5km</strong>
-                </div>
-              </div>
-            </a>
-            <a href="/src/views/product.html" class="grid-product">
-              <button class="grid-product__like-button">
-                <i class="fa-regular fa-heart"></i>
-              </button>
-              <img
-                class="grid-product__image"
-                src="/src/assets//images/betorneira.webp"
-              />
-              <div class="grid-product__info">
-                <h3>Betoneira 150 Litros 0,5CV Monofásica</h3>
-                <div>
-                  <span><strong>R$ 2.400,00</strong></span>
-                  <strong>5km</strong>
-                </div>
-              </div>
-            </a>
-            <a href="/src/views/product.html" class="grid-product">
-              <button class="grid-product__like-button">
-                <i class="fa-regular fa-heart"></i>
-              </button>
-              <img
-                class="grid-product__image"
-                src="/src/assets//images/betorneira.webp"
-              />
-              <div class="grid-product__info">
-                <h3>Betoneira 150 Litros 0,5CV Monofásica</h3>
-                <div>
-                  <strong>R$ 2.400,00</strong>
-                  <strong>5km</strong>
-                </div>
-              </div>
-            </a>
-            <a href="/src/views/product.html" class="grid-product">
-              <button class="grid-product__like-button">
-                <i class="fa-regular fa-heart"></i>
-              </button>
-              <img
-                class="grid-product__image"
-                src="/src/assets//images/betorneira.webp"
-              />
-              <div class="grid-product__info">
-                <h3>Betoneira 150 Litros 0,5CV Monofásica</h3>
-                <div>
-                  <span><strong>R$ 2.400,00</strong></span>
-                  <strong>5km</strong>
-                </div>
-              </div>
-            </a>
-          </section>
+            </div>
+            <section class="products"></section>
+          </div>
         </div>
       </div>
     </main>
