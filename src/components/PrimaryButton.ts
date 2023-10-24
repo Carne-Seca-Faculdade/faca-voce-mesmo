@@ -38,6 +38,7 @@ export class PrimaryButton extends HTMLElement {
       }
 
       buttonElement.classList.add(color);
+      buttonElement.classList.add(`hover:${color}`);
     }
 
     if (this.hasAttribute("class")) {

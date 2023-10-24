@@ -78,6 +78,9 @@ export const Router = {
       case "/register":
         pageContent = document.createElement("register-page");
         break;
+      case "/profile":
+        pageContent = document.createElement("profile-page");
+        break;
       default:
         pageContent = document.createElement("not-found-page");
         break;

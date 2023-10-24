@@ -77,7 +77,7 @@ export class ProductsPage extends HTMLElement {
         </select>
       </div>
       <div class="flex items-center justify-around max-w-[300px] mx-auto gap-5 sm:justify-end sm:max-w-none  sm:mx-0">
-      <primary-button type="button" id="cleanFiltersButton">Limpar</primary-button>
+      <primary-button type="button" id="cleanFiltersButton" color="bg-red-500">Limpar</primary-button>
         <primary-button type="submit">Aplicar</primary-button>
       </div>
     </form>

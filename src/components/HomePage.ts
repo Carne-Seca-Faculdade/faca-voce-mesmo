@@ -3,7 +3,8 @@ const template = `
     <section class="carrosel">
       <div class="hero">
         <div class="hero-text">
-        <h1 class="hero__title">Compre, alugue e divulgue suas ferramentas</h1>
+        <h1 class="text-2xl md:text-5xl text-secondary font-bold mb-2">Faça Você Mesmo</h1>
+        <h2 class="hero__title">Compre, alugue e divulgue suas ferramentas</h2>
         <p class="hero__description">
           A <abbr title="Faça Você Mesmo">FVM</abbr> conecta você com vendedores
           de ferramentas de todo o país. Compre, venda e encontre exatamente o
@@ -22,30 +23,25 @@ const template = `
         <div class="carrosel-slider">
           <div class="slide">
             <img
-              src="src/assets/images/categoriaConstrucaoImage.webp"
+              src="src/assets/images/testImage1.webp"
               alt="Slide 1"
             />
           </div>
           <div class="slide">
             <img
-              src="src/assets/images/categoriaJardinagemImage.webp"
+              src="src/assets/images/testImage2.webp"
               alt="Slide 2"
             />
           </div>
           <div class="slide">
             <img
-              src="src/assets/images/categoriaLimpezaImage.webp"
+              src="src/assets/images/testImage3.webp"
               alt="Slide 3"
             />
           </div>
         </div>
       </div>
     </section>
-
-    
-
-
-
     <section class="about-container">
       <h2>Sobre Nós</h2>
       <ul>
@@ -88,42 +84,40 @@ const template = `
       </a>
     </section>
 
-    <section class="section__popular-equipment">
-      <div class="container__title">
-        <h2>Ferramentas Mais Alugadas</h2>
-      </div>
-      <ul class="popular-equipment">
-        <li class="equipment-card">
-          <a href="#" class="equipment-link">
+    <section class="section">
+      <h2 class="section-title mb-8">Ferramentas Mais Alugadas</h2>
+      <ul class="flex items-center justify-center gap-4 flex-wrap max-w-[500px] md:max-w-[900px] lg:max-w-[1200px]">
+        <li>
+          <a href="/products" class="flex items-center justify-center overflow-hidden text-center rounded-lg bg-neutral-100 flex-col hover:scale-105 transition-all duration-300 ease-in-out">
             <img src="src/assets/images/andaimes.jpg" alt="Equipamento 1" />
-            <div class="equipment-info">
-              <h3>andaimes</h3>
+            <div class="p-4 flex items-center justify-center" >
+              <h3>Andaimes</h3>
             </div>
           </a>
         </li>
-        <li class="equipment-card">
-          <a href="#" class="equipment-link">
+        <li>
+          <a href="/products" class="flex items-center justify-center overflow-hidden text-center rounded-lg bg-neutral-100 flex-col hover:scale-105 transition-all duration-300 ease-in-out">
             <img
               src="src/assets/images/compactador.jpg"
               alt="Equipamento 2"
             />
-            <div class="equipment-info">
-              <h3>compactadores</h3>
+            <div class="p-4 flex items-center justify-center" >
+              <h3>Compactadores</h3>
             </div>
           </a>
         </li>
-        <li class="equipment-card">
-          <a href="#" class="equipment-link">
-            <img src="src/assets/images/betoneira.jpg" alt="Equipamento 3" />
-            <div class="equipment-info">
+        <li>
+          <a href="/products" class="flex items-center justify-center overflow-hidden text-center rounded-lg bg-neutral-100 flex-col hover:scale-105 transition-all duration-300 ease-in-out">
+            <img src="src/assets/images/betoneira.jpg" alt="Equipamento 3"/>
+            <div class="p-4 flex items-center justify-center" >
               <h3>Furadeiras</h3>
             </div>
           </a>
         </li>
-        <li class="equipment-card">
-          <a href="#" class="equipment-link">
+        <li>
+          <a href="/products" class="flex items-center justify-center overflow-hidden text-center rounded-lg bg-neutral-100 flex-col hover:scale-105 transition-all duration-300 ease-in-out">
             <img src="src/assets/images/demolição.jpg" alt="Equipamento 3" />
-            <div class="equipment-info">
+            <div class="p-4 flex items-center justify-center" >
               <h3>Demolidores</h3>
             </div>
           </a>
@@ -136,7 +130,7 @@ const template = `
 
       <section class="tools-container__content">
         <a
-          class="tools-container__card pageLink"
+          class="tools-container__card pageLink hover:scale-105 transition-all duration-300 ease-in-out"
           href="/products?category=gardening"
         >
           <img
@@ -149,7 +143,7 @@ const template = `
           </div>
         </a>
         <a
-          class="tools-container__card pageLink"
+          class="tools-container__card pageLink hover:scale-105 transition-all duration-300 ease-in-out"
           href="/products?category=construction"
         >
           <img
@@ -162,7 +156,7 @@ const template = `
           </div>
         </a>
         <a
-          class="tools-container__card pageLink"
+          class="tools-container__card pageLink hover:scale-105 transition-all duration-300 ease-in-out"
           href="/products?category=cleaning"
         >
           <img
@@ -190,6 +184,8 @@ const template = `
 export class HomePage extends HTMLElement {
   private isTransitioning = false;
   private slider: HTMLDivElement | null = null;
+  private nextSlideTimeoutRef: NodeJS.Timeout | null = null;
+  private slideTimeoutRef: NodeJS.Timeout | null = null;
 
   constructor() {
     super();
@@ -204,6 +200,8 @@ export class HomePage extends HTMLElement {
 
   disconnectedCallback() {
     document.removeEventListener("DOMContentLoaded", this.loadSlider);
+    this.nextSlideTimeoutRef && clearTimeout(this.nextSlideTimeoutRef);
+    this.slideTimeoutRef && clearInterval(this.slideTimeoutRef);
   }
 
   private nextSlide() {
@@ -216,7 +214,7 @@ export class HomePage extends HTMLElement {
       this.slider.style.transition = "transform 0.5s ease-in-out";
       this.slider.style.transform = "translateX(-100%)";
 
-      setTimeout(() => {
+      this.nextSlideTimeoutRef = setTimeout(() => {
         const firstSlide = document.querySelector(".slide:first-child");
 
         if (!firstSlide || !this.slider) {
@@ -238,7 +236,7 @@ export class HomePage extends HTMLElement {
       throw new Error("Error loading slider");
     }
 
-    setInterval(() => this.nextSlide(), 3000);
+    this.slideTimeoutRef = setInterval(() => this.nextSlide(), 3000);
   }
 
   private loadEvents() {

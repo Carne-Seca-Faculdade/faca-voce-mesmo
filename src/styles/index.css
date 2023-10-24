@@ -49,11 +49,11 @@
   justify-content: center;
   align-items: center;
   min-height: calc(100svh - 80px);
-  background-color: red;
 }
 
 .carrosel-slider {
   min-height: 100%;
+  width: 100%;
   display: flex;
   transition: transform 0.5s ease-in-out;
 }
@@ -74,49 +74,6 @@
 .section__popular-equipment {
   background-color: var(--colorWhite);
   margin-top: 0;
-}
-
-.container__title {
-  color: var(--colorPrimary);
-  font-size: 1.8889rem;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  padding-top: 100px;
-}
-
-.popular-equipment {
-  padding: 2rem 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-}
-
-.popular-equipment li {
-  width: 217px;
-  margin: 0 10px 20px;
-}
-
-.equipment-card {
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  transition: transform 0.3s;
-}
-
-.equipment-card:hover {
-  transform: scale(1.1);
-}
-
-.equipment-info {
-  position: relative;
-  text-align: center;
-  color: var(--colorPrimary);
-  margin-top: 10px;
-  text-transform: uppercase;
 }
 
 .hero__title {
@@ -154,6 +111,22 @@
   flex-direction: column;
 }
 
+.section {
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.about-container {
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .about-container ul {
   width: 100%;
   display: flex;
@@ -161,6 +134,13 @@
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.75rem;
+  color: var(--textBlack);
 }
 
 .about-container li {

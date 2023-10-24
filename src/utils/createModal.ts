@@ -9,7 +9,7 @@ export function createModal(modalId: string, modalContent: string) {
 
   const modal = document.createElement("div");
   modal.className =
-    "fixed inset-0 flex items-center justify-center bg-black/60";
+    "fixed inset-0 flex items-center justify-center bg-black/60 z-[99999]";
   modal.id = modalId;
 
   const modalContentWrapper = `
