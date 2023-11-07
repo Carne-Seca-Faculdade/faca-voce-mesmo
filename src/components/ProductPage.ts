@@ -1,4 +1,3 @@
-import { get } from "firebase/database";
 import { ProductType } from "../@types/ProductType";
 import { UserType } from "../@types/UserType";
 import { ProductController } from "../controllers/ProductController";

@@ -1,7 +1,6 @@
 import { UserType } from "../@types/UserType";
 import { ProductsController } from "../controllers/ProductsController";
 import { UserController } from "../controllers/UserController";
-import { Store } from "../services/Store";
 
 const getProfileTemplate = (user: UserType) => {
   return `

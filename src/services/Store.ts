@@ -3,14 +3,6 @@ import { UserController } from "../controllers/UserController";
 import { getLocalStorage } from "../utils/getLocalStorage";
 import { auth } from "./config/firebase";
 
-declare global {
-  interface Window {
-    app: {
-      store: StoreType;
-    };
-  }
-}
-
 const Store: StoreType = {
   user: null,
   products: [],
@@ -39,8 +31,5 @@ const Store: StoreType = {
     }
   },
 };
-
-window.app = window.app || {};
-window.app.store = Store;
 
 export { Store };
