@@ -123,6 +123,20 @@ async function addProductToUser(product: ProductType) {
   }
 }
 
+async function getUserProducts(userProductsIds: string[]) {
+  try {
+    const userProducts = await Promise.all(
+      userProductsIds.map((productId) => {
+        const docRef = doc(db, `products/${productId}`);
+        return getDoc(docRef);
+      }),
+    );
+    return userProducts.map((product) => product.data() as ProductType);
+  } catch (error) {
+    throw new Error(`Error loading user products: ${error}`);
+  }
+}
+
 export const UserController = {
   getUserById,
   loginUser,
@@ -130,4 +144,5 @@ export const UserController = {
   signupUser,
   addProductToUser,
   registerUser,
+  getUserProducts,
 };

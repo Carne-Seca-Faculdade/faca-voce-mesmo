@@ -236,7 +236,7 @@ export class HomePage extends HTMLElement {
       throw new Error("Error loading slider");
     }
 
-    this.slideTimeoutRef = setInterval(() => this.nextSlide(), 3000);
+    // this.slideTimeoutRef = setInterval(() => this.nextSlide(), 3000);
   }
 
   private loadEvents() {

@@ -1,5 +1,6 @@
 import { UserType } from "../@types/UserType";
 import { ProductsController } from "../controllers/ProductsController";
+import { UserController } from "../controllers/UserController";
 import { Store } from "../services/Store";
 
 const getProfileTemplate = (user: UserType) => {
@@ -45,7 +46,7 @@ const getProfileTemplate = (user: UserType) => {
               </button>
             </div>
           </div>
-          <section class="products" id="productsContainer"></section>
+          <section class="grid justify-start gap-4 py-4 px-0 items-center grid-cols-[auto-fit_minmax(250px,_1fr)]" id="productsContainer"></section>
         </div>
       </div>
     </div>
@@ -61,24 +62,25 @@ export class ProfilePage extends HTMLElement {
     this.render();
   }
 
-  private render() {
-    const user = Store.user;
+  private async render() {
+    const URLQueryString = window.location.search;
+    const URLQueryParams = new URLSearchParams(URLQueryString);
+    const userId = URLQueryParams.get("id");
+
+    if (!userId) {
+      throw new Error("User id not found");
+    }
+
+    const user = await UserController.getUserById(userId);
 
     if (!user) {
       throw new Error("User not found");
     }
 
-    const userProducts = this.loadUserData(user);
+    const userProducts = await UserController.getUserProducts(user.ownProducts);
+
     this.innerHTML = getProfileTemplate(user);
     ProductsController.renderProducts(userProducts);
-  }
-
-  private loadUserData(user: UserType) {
-    const userProducts = Store.products.filter(
-      (product) => product.ownedBy === user.id,
-    );
-
-    return userProducts;
   }
 }
 

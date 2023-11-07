@@ -1,3 +1,4 @@
+import { get } from "firebase/database";
 import { ProductType } from "../@types/ProductType";
 import { UserType } from "../@types/UserType";
 import { ProductController } from "../controllers/ProductController";
@@ -45,6 +46,52 @@ export class ProductPage extends HTMLElement {
         <p>Telefone: ${owner.phone}</p>
       </div>
     `;
+  }
+
+  private getEditProductModal(product: ProductType) {
+    return `
+    <form class="flex flex-col gap-4" id="editProductForm">
+      <h2 class="text-xl font-medium">Editar produto</h2>
+      <div class="flex flex-col gap-2">
+        <label htmlFor="name">
+          Nome
+        </label>
+        <input name="name" class="border p-2 rounded-lg border-neutral-200" type="text" id="name" placeholder="Nome do produto" required />
+      </div>
+      <div class="flex flex-col gap-2">
+        <label htmlFor="description">
+          Descrição
+        </label>
+        <textarea class="border p-2 rounded-lg border-neutral-200 max-h-[200px]" name="description" id="description" required></textarea>
+      </div>
+      <div class="flex flex-col gap-2">
+        <label htmlFor="price">
+          Preço
+        </label>
+        <input name="price" class="border p-2 rounded-lg border-neutral-200" type="text" id="price" placeholder="Preço do produto" required/>
+      </div>
+      <div class="flex flex-col gap-2">
+        <label htmlFor="image">
+          Imagem
+        </label>
+        <input name="image" class="border p-2 rounded-lg border-neutral-200" type="text" id="image" placeholder="Imagem do produto" required />
+      </div>
+      <div class="flex flex-col gap-2">
+        <label htmlFor="category">
+          Categoria
+        </label>
+        <select name="category" id="category" class="border p-2 rounded-lg border-neutral-200">
+          <option value="gardening">Jardinagem</option>
+          <option value="cleaning">Limpeza</option>
+          <option value="construction">Contrução</option>
+          <option value="painting">Pintura</option>
+          <option value="electrical">Elétrica</option>
+          <option value="other">Outra</option>
+        </select>
+      </div>
+      <button class="bg-primary text-white-custom py-3 px-5 rounded-lg w-fit mx-auto min-w-[200px] hover:bg-secondary transition-all duration-300 ease-in-out" type="submit">Adicionar</button>
+    </form>
+  `;
   }
 
   private async loadProduct() {
@@ -147,6 +194,12 @@ export class ProductPage extends HTMLElement {
 
   private handleReportButtonClick() {
     console.log("Report button clicked");
+
+    if (!this._product) {
+      throw new Error("Error while loading product");
+    }
+
+    createModal("editModal", this.getEditProductModal(this._product));
   }
 
   private async handleContactButtonClick() {
