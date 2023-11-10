@@ -23,19 +23,19 @@ const template = `
         <div class="carrosel-slider">
           <div class="slide">
             <img
-              src="src/assets/images/testImage1.webp"
+              src="/src/assets/images/testImage1.webp"
               alt="Slide 1"
             />
           </div>
           <div class="slide">
             <img
-              src="src/assets/images/testImage2.webp"
+              src="/src/assets/images/testImage2.webp"
               alt="Slide 2"
             />
           </div>
           <div class="slide">
             <img
-              src="src/assets/images/testImage3.webp"
+              src="/src/assets/images/testImage3.webp"
               alt="Slide 3"
             />
           </div>
@@ -89,7 +89,7 @@ const template = `
       <ul class="flex items-center justify-center gap-4 flex-wrap max-w-[500px] md:max-w-[900px] lg:max-w-[1200px]">
         <li>
           <a href="/products" class="flex items-center justify-center overflow-hidden text-center rounded-lg bg-neutral-100 flex-col hover:scale-105 transition-all duration-300 ease-in-out">
-            <img src="src/assets/images/andaimes.jpg" alt="Equipamento 1" />
+            <img src="/src/assets/images/andaimes.jpg" alt="Equipamento 1" />
             <div class="p-4 flex items-center justify-center" >
               <h3>Andaimes</h3>
             </div>
@@ -98,7 +98,7 @@ const template = `
         <li>
           <a href="/products" class="flex items-center justify-center overflow-hidden text-center rounded-lg bg-neutral-100 flex-col hover:scale-105 transition-all duration-300 ease-in-out">
             <img
-              src="src/assets/images/compactador.jpg"
+              src="/src/assets/images/compactador.jpg"
               alt="Equipamento 2"
             />
             <div class="p-4 flex items-center justify-center" >
@@ -108,7 +108,7 @@ const template = `
         </li>
         <li>
           <a href="/products" class="flex items-center justify-center overflow-hidden text-center rounded-lg bg-neutral-100 flex-col hover:scale-105 transition-all duration-300 ease-in-out">
-            <img src="src/assets/images/betoneira.jpg" alt="Equipamento 3"/>
+            <img src="/src/assets/images/betoneira.jpg" alt="Equipamento 3"/>
             <div class="p-4 flex items-center justify-center" >
               <h3>Furadeiras</h3>
             </div>
@@ -116,7 +116,7 @@ const template = `
         </li>
         <li>
           <a href="/products" class="flex items-center justify-center overflow-hidden text-center rounded-lg bg-neutral-100 flex-col hover:scale-105 transition-all duration-300 ease-in-out">
-            <img src="src/assets/images/demolição.jpg" alt="Equipamento 3" />
+            <img src="/src/assets/images/demolição.jpg" alt="Equipamento 3" />
             <div class="p-4 flex items-center justify-center" >
               <h3>Demolidores</h3>
             </div>
